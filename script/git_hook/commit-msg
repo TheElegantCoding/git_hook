@@ -8,10 +8,3 @@ source $(dirname $0)/../asset/icon.sh
 source $(dirname $0)/../style/color.sh
 
 validate_commit_length
-
-PATTERN="([a-z:]) ([a-z]+)(\(.*\))?: ([a-z])$"
-
-if ! [[ "$MESSAGE" =~ $PATTERN ]]; then
-  print_error "Commit message did not match 'icon type(scope): subject'"
-fi
-
