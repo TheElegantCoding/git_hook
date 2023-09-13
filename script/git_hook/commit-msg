@@ -15,4 +15,3 @@ if ! [[ "$MESSAGE" =~ $PATTERN ]]; then
   print_error "Commit message did not match 'icon type(scope): subject'"
 fi
 
-exit 1
