@@ -11,7 +11,7 @@ validate_commit_length
 
 MESSAGE=`head -n 1 "$1"`
 PATTERN=":([a-z]+): ([a-z]+): (?:(?!(.*[A-Z]+)))"
-
+print $MESSAGE
 if ! [[ "$MESSAGE" =~ $PATTERN ]]; then
   print_error " Commit message did not match 'icon type(scope): subject'"
   MESSAGE_ERROR_CODE=1
