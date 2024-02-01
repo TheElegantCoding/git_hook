@@ -1,27 +1,9 @@
 {
-  "name": "management_latam_webpage",
-  "description": "🌐 Web page of courses and investment, company management latam",
+  "name": "git_hook",
+  "description": "⚙️comprehensive set of git hooks designed to streamline your development workflow, automate routine tasks, and ensure code quality. This powerful suite empowers you to maintain a consistent and organized development environment, enhancing productivity and reducing the risk of errors.",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
   "author": "Luis Monsalve",
-  "keywords": [
-    "solid",
-    "typescript",
-    "sass",
-    "postcss",
-    "clean-architecture",
-    "vite",
-    "eslint",
-    "stylelint",
-    "web-development"
-  ],
-  "homepage": "https://gestioneslatinoamerica.com",
-  "bugs": "https://github.com/AesthetiCoder/management_latam/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AesthetiCoder/management_latam"
-  },
   "scripts": {
     "postinstall": "git config core.hooksPath ./script/git_hook",
     "release": "bash ./script/module/release.sh"

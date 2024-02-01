@@ -8,3 +8,13 @@ source $(dirname $0)/../asset/icon.sh
 source $(dirname $0)/../style/color.sh
 
 validate_commit_length
+
+MESSAGE=`head -n 1 "$1"`
+PATTERN="(:[a-z]+:) ([a-z]+): (?:(?!(.*[A-Z]+)))"
+
+if ! [[ "$MESSAGE" =~ $PATTERN ]]; then
+  print_error " Commit message did not match 'icon type(scope): subject'"
+  MESSAGE_ERROR_CODE=1
+fi
+
+exit 1
