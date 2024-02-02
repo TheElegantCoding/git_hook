@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function remove_last_char_if_not_empty()
 {
   local container=("$@")

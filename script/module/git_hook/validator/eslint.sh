@@ -13,7 +13,7 @@ function run_eslint()
   fi
 }
 
-function eslint_hook()
+function eslint_validator()
 {
   local eslint_autofix_flag=""
 
@@ -25,6 +25,7 @@ function eslint_hook()
 
   if [[ -n "$STAGED_FILES" ]]; then
     spinner "Running eslint in ........... ${COUNT_FILES} files" run_eslint $eslint_autofix_flag
+    print_staged_file
     add_files_to_staged_tree "${FILES_TO_ADD_AFTER_LINTING[*]}"
     print_success "Lint all ts/js files correctly"
   fi

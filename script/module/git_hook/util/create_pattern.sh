@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function create_pattern()
 {
   local files_paths_list=("$@")

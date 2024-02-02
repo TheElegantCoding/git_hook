@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function filter_array_with_inverted_regex()
 {
   local files_paths_list=("$@")

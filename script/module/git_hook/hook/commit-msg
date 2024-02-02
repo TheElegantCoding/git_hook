@@ -1,0 +1,12 @@
+#!/bin/bash
+source $(dirname $0)/../constant/commit_type.sh
+source $(dirname $0)/../asset/icon.sh
+
+source $(dirname $0)/../style/color.sh
+
+source $(dirname $0)/../util/print.sh
+source $(dirname $0)/../util/validate_commit.sh
+
+validate_commit_length
+validate_commit_pattern
+validate_commit_type

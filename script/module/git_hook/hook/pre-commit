@@ -1,8 +1,7 @@
 #!/bin/bash
+source $(dirname $0)/../asset/icon.sh
 
-source $(dirname $0)/../module/eslint.sh
-source $(dirname $0)/../module/stylelint.sh
-source $(dirname $0)/../module/tsc.sh
+source $(dirname $0)/../style/color.sh
 
 source $(dirname $0)/../util/add_files_to_staged_tree.sh
 source $(dirname $0)/../util/create_pattern.sh
@@ -12,8 +11,11 @@ source $(dirname $0)/../util/print.sh
 source $(dirname $0)/../util/remove_last_char.sh
 source $(dirname $0)/../util/spinner.sh
 
-source $(dirname $0)/../asset/icon.sh
-
-source $(dirname $0)/../style/color.sh
+source $(dirname $0)/../validator/eslint.sh
+source $(dirname $0)/../validator/stylelint.sh
+source $(dirname $0)/../validator/tsc.sh
 
 printf "\n"
+
+tsc_validator
+#eslint_validator

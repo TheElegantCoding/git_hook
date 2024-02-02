@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function spinner()
 {
   $2 & PID=$!
