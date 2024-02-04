@@ -17,7 +17,7 @@ function eslint_validator()
 {
   local eslint_autofix_flag=""
 
-  prepare_staged_files ".*\.(tsx?|jsx?)$"
+  prepare_staged_files ".*\.(tsx?|jsx?|json|yaml|yml|html)$"
 
   if [ ${#FILES_TO_ADD_AFTER_LINTING} = ${#STAGED_FILES} ]; then
     eslint_autofix_flag="--fix"

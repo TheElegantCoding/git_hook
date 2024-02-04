@@ -38,5 +38,9 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx", "./test/react.jsx"
+  ],
+  "exclude": [ "node_modules", "**/node_modules/*", "dist" ]
 }

@@ -1,3 +1,7 @@
-let varaible = 2;
+/* eslint-disable no-alert */
+const react = () =>
+{
+  alert('HELLO');
+};
 
-varaible = 2;
+export { react };

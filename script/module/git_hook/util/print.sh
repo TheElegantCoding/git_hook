@@ -36,7 +36,7 @@ function print_file_size()
   fi
 }
 
-FILE_ICON=""
+FILE_ICON="  "
 
 function print_icon_file()
 {
@@ -44,13 +44,28 @@ function print_icon_file()
 
   case $file_extension in
     "ts")
-      FILE_ICON="󰛦"
+      FILE_ICON="${BLUE_FOREGROUND}󰛦${RESET}"
       ;;
     "tsx")
-      FILE_ICON=" "
+      FILE_ICON="${BLUE_FOREGROUND} ${RESET}"
+      ;;
+    "js")
+      FILE_ICON="${YELLOW_FOREGROUND} ${RESET}"
+      ;;
+    "jsx")
+      FILE_ICON="${CYAN_FOREGROUND} ${RESET}"
+      ;;
+    "json")
+      FILE_ICON="${YELLOW_FOREGROUND} ${RESET}"
+      ;;
+    "html")
+      FILE_ICON="${ORANGE_FOREGROUND} ${RESET}"
+      ;;
+    "yml")
+      FILE_ICON="${PURPLE_FOREGROUND} ${RESET}"
       ;;
     *)
-      FILE_ICON=""
+      FILE_ICON="${GRAY_FOREGROUND} ${RESET}"
       ;;
   esac
 }
@@ -73,8 +88,9 @@ function print_staged_file()
     local line=$(printf "%*s%s" $space '' "$human_file_size")
     print_icon_file $FILE
 
-    echo -e "${suffix} ${BLUE_FOREGROUND}${FILE_ICON} ${WHITE_FOREGROUND}$FILE${RESET}${line}"
+    echo -e "${suffix} ${FILE_ICON} ${WHITE_FOREGROUND}$FILE${RESET}${line}"
   done
+
   printf "\n"
 }
 

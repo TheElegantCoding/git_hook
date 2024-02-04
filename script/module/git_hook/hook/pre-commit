@@ -18,4 +18,4 @@ source $(dirname $0)/../validator/tsc.sh
 printf "\n"
 
 tsc_validator
-#eslint_validator
+eslint_validator
