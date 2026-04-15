@@ -1,18 +1,19 @@
-# misc
+# System
 .DS_Store
+Thumbs.db
 *.pem
+*.key
 
-# dependencies
-node_modules
+# Dependencies
+node_modules/
 
-# build
-dist
+# Build
+dist/
+*.tsbuildinfo
 
-# env files
-.env.*
-
-# debug
+# Logs
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+bun-debug.log*
