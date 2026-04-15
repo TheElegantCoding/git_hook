@@ -1,11 +1,18 @@
-import elegantCoding from 'eslint-config-elegant-coding';
+import eslintConfig from 'eslint-config-universal-code';
 
-export default elegantCoding({
-  html: true,
-  ignore: [ 'postcss.config.cjs' ],
+const config = eslintConfig({
   json: true,
-  jsxA11y: true,
   stylistic: true,
+  unicorn: true,
+  yml: true,
+  html: true,
+  perfectionist: true,
   typescript: true,
-  yml: true
+  ignore: ['postcss.config.cjs']
+}, {
+  rules: {
+    'unicorn/no-process-exit': 'off'
+  }
 });
+
+export default config;
