@@ -84,7 +84,7 @@ const generateRelease = (nextVersion: string) => {
   changelog();
 
   execSync('git add package.json CHANGELOG.md');
-  execSync(`git commit -m "release: ${nextVersion}"`);
+  execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'inherit' });
   execSync(`git tag v${nextVersion}`);
   logger.info(`Subiendo tag v${nextVersion} a GitHub...`);
   execSync(`git push origin v${nextVersion}`);
