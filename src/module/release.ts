@@ -92,11 +92,11 @@ const generateRelease = (nextVersion: string) => {
   updatePackageJson(nextVersion);
   changelog();
   const releaseNotes = getFormattedCommits(nextVersion).join('\n');
+  console.log(nextVersion, releaseNotes);
 
   execSync('git add package.json CHANGELOG.md');
-  console.log('commit start');
   execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'inherit' });
-  console.log('commit end');
+  execSync('git push origin HEAD');
   execSync(`git tag v${nextVersion}`);
   logger.info(`Subiendo tag v${nextVersion} a GitHub...`);
   execSync(`git push origin v${nextVersion}`);
