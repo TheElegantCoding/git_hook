@@ -40,13 +40,11 @@ const getMatchingFiles = (pattern: string, stagedFiles: string[]): string[] => {
 };
 
 const executeCommand = (matchingFiles: string[], command: string, loaderInstance: LoggerLoader): void => {
-  logger.blank();
   loaderInstance.start();
   execSync(`${command} ${matchingFiles.join(' ')}`, { stdio: 'pipe' });
   execSync(`git add ${matchingFiles.join(' ')}`);
   process.stdout.write('\r\u001b[2K');
   loaderInstance.stop();
-  logger.blank();
   const longerName = getLongerName(matchingFiles);
 
   matchingFiles.forEach((file) => {
@@ -64,7 +62,6 @@ const executeCommand = (matchingFiles: string[], command: string, loaderInstance
 const errorLinting = (command: string, loaderInstance: LoggerLoader, error: unknown) => {
   process.stdout.write('\r\u001b[2K');
   loaderInstance.stop();
-  logger.blank();
   logger.error(`Error linting: ${command}`);
   const errorMessage = error as { stderr: Buffer; status: number; stdout?: Buffer };
 
