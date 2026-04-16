@@ -46,7 +46,7 @@
     "commit:check": "bun src/playground/lint_commit.ts",
     "lint:staged": "bun src/playground/lint_staged.ts",
     "lint": "eslint --fix",
-    "release": "bun run build && bun src/playground/release.ts && bun publish --access public"
+    "release": "bun run build && bun src/playground/release.ts"
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
