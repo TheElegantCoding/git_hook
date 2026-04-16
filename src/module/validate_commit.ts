@@ -7,14 +7,14 @@ const commitMessage = () => {
   const messageFilePath = process.argv[2] ?? 'No commit message provided';
 
   if (!messageFilePath) {
-    logger.error('Commit message file path is required.', { blankBelow: true });
+    logger.error('Commit message file path is required.');
     process.exit(1);
   }
 
   const message = fs.readFileSync(messageFilePath, 'utf8').trim();
 
   if (!message) {
-    logger.error('Commit message is required.', { blankBelow: true });
+    logger.error('Commit message is required.');
     process.exit(1);
   }
 
@@ -25,14 +25,14 @@ const validateCommitType = (message: string) => {
   const commitType = message.split(':')[0]?.split('(')[0]?.trim().toLowerCase();
 
   if (!commitType || !commonCommit.includes(commitType)) {
-    logger.error(`Invalid commit type. allowed types are: ${commonCommit.join(', ')}`, { blankBelow: true });
+    logger.error(`Invalid commit type. allowed types are: ${commonCommit.join(', ')}`);
     process.exit(1);
   }
 };
 
 const validateCommitLength = (message: string, maxLength: number) => {
   if (message.length > maxLength) {
-    logger.error(`Commit message is too long. Maximum length is ${maxLength} characters.`, { blankBelow: true });
+    logger.error(`Commit message is too long. Maximum length is ${maxLength} characters.`);
     process.exit(1);
   }
 };
@@ -41,13 +41,13 @@ const validateCommitPattern = (message: string, maxLength: number, allowedTypes:
   const commitMessagePattern = new RegExp(String.raw`^(${allowedTypes.join('|')})(\([a-zA-Z0-9_-]+\))?: .{1,${maxLength}}$`);
 
   if (!commitMessagePattern.test(message)) {
-    logger.error('Invalid commit message. It must follow the format: type(scope): description', { blankBelow: true });
+    logger.error('Invalid commit message. It must follow the format: type(scope): description');
     process.exit(1);
   }
 };
 
 const validateCommit = () => {
-  logger.info('Validating commit message...', { blankAbove: true, blankBelow: true });
+  logger.info('Validating commit message...');
   const config = getConfiguration();
   const message = commitMessage();
 
@@ -55,7 +55,7 @@ const validateCommit = () => {
   validateCommitLength(message, config.commitlint.maxLength);
   validateCommitPattern(message, config.commitlint.maxLength, config.commitlint.allowedTypes);
 
-  logger.success('Commit message is valid.', { blankBelow: true });
+  logger.success('Commit message is valid.');
 };
 
 export { validateCommit };
