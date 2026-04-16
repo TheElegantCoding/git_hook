@@ -8,7 +8,7 @@ const isWorkingDirectoryClean = () => {
   const status = execSync('git status --porcelain').toString().trim();
 
   if (status.length > 0) {
-    logger.error('Working directory is not clean. Please commit or stash your changes before releasing.', { blankBelow: true });
+    logger.error('Working directory is not clean. Please commit or stash your changes before releasing.');
     process.exit(1);
   }
 };
@@ -87,11 +87,11 @@ const generateRelease = (nextVersion: string) => {
   execSync(`git commit -m "release: ${nextVersion}"`);
   execSync(`git tag v${nextVersion}`);
   githubRelease(nextVersion);
-  logger.success(`Released version ${nextVersion}`, { blankBelow: true });
+  logger.success(`Released version ${nextVersion}`);
 };
 
 const release = () => {
-  logger.info('Releasing new version', { blankAbove: true, blankBelow: true });
+  logger.info('Releasing new version');
   isWorkingDirectoryClean();
   const currentVersion = getPackageVersion();
   const nextVersion = getNextVersion(currentVersion, getFormattedCommits(currentVersion));
@@ -102,7 +102,7 @@ const release = () => {
     execSync('git reset --soft HEAD~1');
     execSync(`git tag -d v${nextVersion}`);
     updatePackageJson(currentVersion);
-    logger.error(`Release failed: ${(error as Error).message}`, { blankBelow: true });
+    logger.error(`Release failed: ${(error as Error).message}`);
   }
 };
 
