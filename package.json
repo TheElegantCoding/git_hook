@@ -1,8 +1,8 @@
 {
-  "name": "git_hook",
-  "description": "",
+  "name": "gitlys",
+  "description": "A lightweight, zero-dependency release automation toolkit for Node.js and Bun. Handles semantic versioning, categorized changelogs, and automated GitHub releases",
   "author": "Luis Monsalve",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "homepage": "https://s#readme",
   "repository": {
     "type": "git",
@@ -30,19 +30,23 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "gitlys": "./dist/bin/cli.js"
+  },
   "files": ["./dist"],
   "engines": {
     "node": ">=22.17.0",
     "bun": ">=1.1.0"
   },
   "scripts": {
-    "preinstall": "npx only-allow bun",
+    "build": "tsup src/index.ts src/bin/cli.ts src/util/install.ts --format esm --dts --clean",
     "postinstall": "git config core.hooksPath ./.git/hooks",
+    "preinstall": "npx only-allow bun",
     "install": "bun src/util/install.ts",
     "commit:check": "bun src/playground/lint_commit.ts",
-    "lint:staged": "bun src/playground/lint_staged.ts"
-  },
-  "dependencies": {
+    "lint:staged": "bun src/playground/lint_staged.ts",
+    "lint": "eslint --fix",
+    "release": "bun run build && bun src/playground/release.ts && bun publish --access public"
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
