@@ -1,3 +1,4 @@
+import { getConfiguration } from '@src/util/file_configuration.js';
 import { logger } from '@src/util/logger.js';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -8,11 +9,10 @@ const gitHooksDirectory = path.join(projectRoot, '.git', 'hooks');
 if (fs.existsSync(gitHooksDirectory)) {
   const commitMessageHook = path.join(gitHooksDirectory, 'commit-msg');
   const precommitHook = path.join(gitHooksDirectory, 'pre-commit');
-  const isProduction = false;
-  // eslint-disable-next-line ts/no-unnecessary-condition
-  const installCommand = isProduction ? 'npx tsx ./node_modules/tu-libreria/src/index.js "$1"' : 'bun src/index.ts "$1"';
-  // eslint-disable-next-line ts/no-unnecessary-condition
-  const lintStagedCommand = isProduction ? 'npx tsx ./node_modules/tu-libreria/src/index.js "$1"' : 'bun src/lint_staged.ts';
+  const isProduction = import.meta.url.includes('node_modules');
+  const configuration = getConfiguration();
+  const installCommand = isProduction ? 'npx tsx ./node_modules/gitlys/src/index.js "$1"' : `${configuration.packageManager} src/index.ts "$1"`;
+  const lintStagedCommand = isProduction ? 'npx tsx ./node_modules/gitlys/src/lint_staged.js "$1"' : `${configuration.packageManager} src/lint_staged.ts`;
 
   const hookContent = `#!/bin/bash
 ${installCommand}
