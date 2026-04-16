@@ -1,3 +1,3 @@
-import { lintStaged } from '@src/module/lint_staged.js';
+import { lintStaged } from '@src/lint_staged.js';
 
 lintStaged();
