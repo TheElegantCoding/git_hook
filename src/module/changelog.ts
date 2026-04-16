@@ -80,6 +80,7 @@ const updateChangelog = (version: string, changes: string[]) => {
 
 const getRawLog = (currentVersion: string): string[] => {
   try {
+    execSync(`git rev-parse v${currentVersion}`, { stdio: 'ignore' });
     const rawLog = execSync(`git log v${currentVersion}..HEAD --pretty=format:"%s|%h|%an"`).toString().trim().split('\n');
     return rawLog;
   } catch {
