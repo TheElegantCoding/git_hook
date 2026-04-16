@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable max-statements */
 import { changelog, getFormattedCommits } from '@src/module/changelog.js';
 import { logger } from '@src/util/logger.js';
 import { execSync } from 'node:child_process';
@@ -89,13 +91,16 @@ const githubRelease = (version: string, releaseNotes: string) => {
 const generateRelease = (nextVersion: string) => {
   updatePackageJson(nextVersion);
   changelog();
+  const releaseNotes = getFormattedCommits(nextVersion).join('\n');
 
   execSync('git add package.json CHANGELOG.md');
+  console.log('commit start');
   execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'inherit' });
+  console.log('commit end');
   execSync(`git tag v${nextVersion}`);
   logger.info(`Subiendo tag v${nextVersion} a GitHub...`);
   execSync(`git push origin v${nextVersion}`);
-  githubRelease(nextVersion, getFormattedCommits(nextVersion).join('\n'));
+  githubRelease(nextVersion, releaseNotes);
   logger.success(`Released version ${nextVersion}`);
 };
 
@@ -103,7 +108,8 @@ const release = () => {
   logger.info('Releasing new version');
   isWorkingDirectoryClean();
   const currentVersion = getPackageVersion();
-  const nextVersion = getNextVersion(currentVersion, getFormattedCommits(currentVersion));
+  const commits = getFormattedCommits(currentVersion);
+  const nextVersion = getNextVersion(currentVersion, commits);
 
   try {
     generateRelease(nextVersion);
