@@ -1,0 +1,5 @@
+{
+  "lintStaged": {
+    "*.{ts,js,jsx,tsx,json,yml,yaml}": "bunx eslint --fix"
+  }
+}
