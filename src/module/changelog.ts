@@ -79,9 +79,15 @@ const updateChangelog = (version: string, changes: string[]) => {
 };
 
 const getRawLog = (currentVersion: string): string[] => {
+  if (currentVersion === '0.0.0') {
+    const fullLog = execSync('git log --pretty=format:"%s|%h|%an"').toString().trim();
+    return fullLog ? fullLog.split('\n') : [];
+  }
+
+  const tag = currentVersion.startsWith('v') ? currentVersion : `v${currentVersion}`;
   try {
-    execSync(`git rev-parse v${currentVersion}`, { stdio: 'ignore' });
-    const rawLog = execSync(`git log v${currentVersion}..HEAD --pretty=format:"%s|%h|%an"`).toString().trim().split('\n');
+    execSync(`git rev-parse ${tag}`, { stdio: 'ignore' });
+    const rawLog = execSync(`git log ${tag}..HEAD --pretty=format:"%s|%h|%an"`).toString().trim().split('\n');
     return rawLog;
   } catch {
     const rawLog = execSync('git log --pretty=format:"%s|%h|%an"').toString().trim().split('\n');
