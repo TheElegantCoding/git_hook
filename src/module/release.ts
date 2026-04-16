@@ -78,7 +78,10 @@ const updatePackageJson = (newVersion: string) => {
 };
 
 const githubRelease = (version: string, releaseNotes: string) => {
-  execSync(`gh release create v${version} --title "Release ${version}" --notes "${releaseNotes}"`, { stdio: 'inherit' });
+  const temporaryNotesPath = './TEMP_RELEASE_NOTES.md';
+  fs.writeFileSync(temporaryNotesPath, releaseNotes, 'utf8');
+  execSync(`gh release create v${version} --title "Release ${version}" --notes-file "${temporaryNotesPath}"`, { stdio: 'inherit' });
+  fs.unlinkSync(temporaryNotesPath);
 };
 
 const generateRelease = (nextVersion: string) => {
