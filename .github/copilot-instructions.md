@@ -1,0 +1,26 @@
+# Instrucciones de Commit
+- Use conventional commits
+- Format: `<type>: <short description in lowercase>`.
+- The description should be concise and describe the change in a few words and always in lowercase.
+- The maximum length of the title should be 80 characters.
+- Allowed types: `feat`, `fix`, `doc`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `config`, `update`, `release`, `breaking`, `typo`, `asset`, `package`, `language`, `security`, `revert`.
+- The message must be in **English**.
+- Do not use periods at the end of the title.
+- If the change is visual, use the type `style`.
+- If it is a performance improvement, use `perf`.
+- If it is a refactor, use `refactor`.
+- If it is a test, use `test`.
+- If it is a build change, use `build`.
+- If it is a CI change, use `ci`.
+- If it is a configuration change, use `config`.
+- If it is a documentation change, use `doc`.
+- If it is a new feature, use `feat`.
+- If it is a bug fix, use `fix`.
+- If it is a release, use `release`.
+- If it is a breaking change, use `breaking`.
+- If it is a typo, use `typo`.
+- If it is an asset change, use `asset`.
+- If it is a package change, use `package`.
+- If it is a language change, use `language`.
+- If it is a security change, use `security`.
+- If it is a revert, use `revert`.
