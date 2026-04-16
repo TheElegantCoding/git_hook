@@ -75,8 +75,15 @@ const updatePackageJson = (newVersion: string) => {
   fs.writeFileSync(packagePath, `${JSON.stringify(packageContent, null, 2)}\n`);
 };
 
-const githubRelease = (version: string) => {
-  execSync(`gh release create v${version} --title "Release ${version}" --notes-file CHANGELOG.md`, { stdio: 'pipe' });
+const githubRelease = (version: string, releaseNotes: string) => {
+  execSync(`gh release create v${version} --title "Release ${version}" --notes -`, {
+    input: releaseNotes,
+    stdio: [
+      'pipe',
+      'inherit',
+      'inherit'
+    ]
+  });
 };
 
 const generateRelease = (nextVersion: string) => {
@@ -88,7 +95,7 @@ const generateRelease = (nextVersion: string) => {
   execSync(`git tag v${nextVersion}`);
   logger.info(`Subiendo tag v${nextVersion} a GitHub...`);
   execSync(`git push origin v${nextVersion}`);
-  githubRelease(nextVersion);
+  githubRelease(nextVersion, getFormattedCommits(nextVersion).join('\n'));
   logger.success(`Released version ${nextVersion}`);
 };
 
