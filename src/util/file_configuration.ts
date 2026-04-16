@@ -24,10 +24,10 @@ const getConfiguration = () => {
     throw new Error('Invalid configuration format in .gitlys.json');
   }
 
-  config.commitlint ||= configuration.commitlint;
-  config.lintStaged ||= configuration.lintStaged;
-  config.packageManager ||= configuration.packageManager;
-  config.release ||= configuration.release;
+  config.commitlint ??= configuration.commitlint;
+  config.lintStaged ??= configuration.lintStaged;
+  config.packageManager ??= configuration.packageManager;
+  config.release ??= configuration.release;
 
   return config;
 };
