@@ -78,14 +78,7 @@ const updatePackageJson = (newVersion: string) => {
 };
 
 const githubRelease = (version: string, releaseNotes: string) => {
-  execSync(`gh release create v${version} --title "Release ${version}" --notes -`, {
-    input: releaseNotes,
-    stdio: [
-      'pipe',
-      'inherit',
-      'inherit'
-    ]
-  });
+  execSync(`gh release create v${version} --title "Release ${version}" --notes "${releaseNotes}"`, { stdio: 'inherit' });
 };
 
 const generateRelease = (nextVersion: string) => {
@@ -111,14 +104,15 @@ const release = () => {
   const commits = getFormattedCommits(currentVersion);
   const nextVersion = getNextVersion(currentVersion, commits);
 
-  try {
-    generateRelease(nextVersion);
-  } catch (error) {
-    execSync('git reset --soft HEAD~1');
-    execSync(`git tag -d v${nextVersion}`);
-    updatePackageJson(currentVersion);
-    logger.error(`Release failed: ${(error as Error).message}`);
-  }
+  generateRelease(nextVersion);
+
+  // try {
+  // } catch (error) {
+  //  execSync('git reset --soft HEAD~1');
+  //  execSync(`git tag -d v${nextVersion}`);
+  //  updatePackageJson(currentVersion);
+  //  logger.error(`Release failed: ${(error as Error).message}`);
+  // }
 };
 
 export { release };
