@@ -3,14 +3,16 @@ import { getStagedCommit } from '@src/module/git/git_commit.js';
 import { getCurrentVersion } from '@src/module/release/version.js';
 import { logger } from '@src/util/logger.js';
 
-const changelog = () => {
+import type { CommitType } from '@src/type/commit_type.js';
+
+const changelog = (commits?: CommitType[]) => {
   try {
     createChangelogFile();
 
     const currentVersion = getCurrentVersion(false);
-    const commits = getStagedCommit(currentVersion, false);
+    const stagedCommits = getStagedCommit(currentVersion, false);
 
-    updateChangelog(currentVersion, commits);
+    updateChangelog(currentVersion, commits ?? stagedCommits);
     logger.success(`Changelog updated successfully for version ${currentVersion}`);
   } catch (error) {
     logger.error(`Error updating changelog: ${(error as Error).message}`);
