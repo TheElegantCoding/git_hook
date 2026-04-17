@@ -1,12 +1,28 @@
 import { getConfiguration } from '@src/util/file_configuration.js';
-import { loggerLoader } from '@src/util/logger.js';
+import { logger, loggerLoader } from '@src/util/logger.js';
+import { isGhInstalled } from '@src/util/validation.js';
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
+
+import type { ConfigurationType } from '@src/type/configuration_type.js';
+
+const checkGithubRelease = (configuration: ConfigurationType) => {
+  if (configuration.release?.releaseToGithub === false) {
+    return false;
+  }
+
+  if (!isGhInstalled()) {
+    logger.warning('GitHub CLI (gh) is not installed. Skipping GitHub release creation.');
+    return false;
+  }
+
+  return true;
+};
 
 const githubCreateRelease = (version: string, releaseNotes: string) => {
   const configuration = getConfiguration();
 
-  if (configuration.release.releaseToGithub === false) {
+  if (!checkGithubRelease(configuration)) {
     return;
   }
 
