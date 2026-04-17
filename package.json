@@ -31,7 +31,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "gitlys": "./dist/bin/cli.js"
+    "gitlys": "dist/cli.js"
   },
   "files": ["./dist"],
   "engines": {
@@ -39,7 +39,7 @@
     "bun": ">=1.1.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts src/bin/cli.ts src/util/install.ts --format esm --dts --clean",
+    "build": "tsup --entry.index=src/index.ts --entry.cli=src/module/cli/cli.ts --format esm --clean --minify --dts",
     "postinstall": "git config core.hooksPath ./.git/hooks",
     "preinstall": "npx only-allow bun",
     "install": "bun src/util/install.ts",
