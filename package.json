@@ -67,6 +67,7 @@
     "publish": "npm publish"
   },
   "devDependencies": {
+    "@clack/prompts": "^1.2.0",
     "@types/node": "^25.5.2",
     "eslint-config-universal-code": "^1.0.13",
     "logginlys": "^2.0.2",
