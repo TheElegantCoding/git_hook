@@ -16,6 +16,13 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.7] - 2026-04-17
+
+- **fix:** update image path in README to correct location [`5e64f60`](https://github.com/TheElegantCoding/gitlys/commit/5e64f60) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update package description and refine keywords in package.json [`20a2e1a`](https://github.com/TheElegantCoding/gitlys/commit/20a2e1a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update release notes format to include commit type and improve message [`6a2e841`](https://github.com/TheElegantCoding/gitlys/commit/6a2e841) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** enhance changelog entry format to include commit type and clean message [`b47550e`](https://github.com/TheElegantCoding/gitlys/commit/b47550e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.6] - 2026-04-17
 
 - fix: correct path for cli binary and update build script entries [[5acf1e8](https://github.com/TheElegantCoding/gitlys/commit/5acf1e8)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
