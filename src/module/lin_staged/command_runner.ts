@@ -5,10 +5,11 @@ import { execSync } from 'node:child_process';
 
 const runLintCommand = (command: string, pattern: string, files: string[]): void => {
   const spinner = loggerLoader(`Linting: "${command}" on pattern: "${pattern}"`);
+  const filesToPass = command.includes('tsc') ? '' : files.map((entry) => { return `"${entry}"`; }).join(' ');
 
   try {
     spinner.start();
-    execSync(`${command} ${files.join(' ')}`, { stdio: 'pipe' });
+    execSync(`${command} ${filesToPass}`, { stdio: 'pipe' });
     stageFiles(files);
     spinner.stop();
     fileReport(files);
