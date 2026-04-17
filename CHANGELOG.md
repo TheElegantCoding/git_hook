@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.1] - 2026-04-17
+
+- **fix:** update logger message in createTag function for clarity [`5cd76b0`](https://github.com/TheElegantCoding/gitlys/commit/5cd76b0) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add loading indicators for git push operations [`0639ab9`](https://github.com/TheElegantCoding/gitlys/commit/0639ab9) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.0] - 2026-04-17
 
 - **feat:** add initial install script to initialize the application [`0803f05`](https://github.com/TheElegantCoding/gitlys/commit/0803f05) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
