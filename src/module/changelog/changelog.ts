@@ -10,9 +10,13 @@ const changelog = (commits?: CommitType[]) => {
     createChangelogFile();
 
     const currentVersion = getCurrentVersion(false);
-    const stagedCommits = getStagedCommit(currentVersion, false);
+    let stagedCommits: CommitType[] = commits ?? [];
 
-    updateChangelog(currentVersion, commits ?? stagedCommits);
+    if (!commits) {
+      stagedCommits = getStagedCommit(currentVersion, false);
+    }
+
+    updateChangelog(currentVersion, stagedCommits);
     logger.success(`Changelog updated successfully for version ${currentVersion}`);
   } catch (error) {
     logger.error(`Error updating changelog: ${(error as Error).message}`);
