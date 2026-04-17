@@ -55,9 +55,8 @@
   },
   "scripts": {
     "build": "tsup --format esm --clean --minify --dts",
-    "postinstall": "git config core.hooksPath ./.git/hooks",
+    "postinstall": "bun src/util/install.ts",
     "preinstall": "npx only-allow bun",
-    "install": "bun src/util/install.ts",
     "commit:check": "bun src/playground/lint_commit.ts",
     "lint-staged:check": "bun src/playground/lint_staged.ts",
     "changelog:check": "bun src/playground/changelog.ts",
@@ -67,10 +66,10 @@
     "publish": "npm publish"
   },
   "devDependencies": {
-    "@clack/prompts": "^1.2.0",
+    "@inquirer/prompts": "^8.4.1",
     "@types/node": "^25.5.2",
     "eslint-config-universal-code": "^1.0.13",
-    "logginlys": "^2.0.2",
+    "logginlys": "^3.0.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
