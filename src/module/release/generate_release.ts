@@ -7,10 +7,10 @@ import { updatePackageJson } from '@src/module/release/version.js';
 import { logger } from '@src/util/logger.js';
 
 const generateRelease = (nextVersion: string, releaseNotes: string) => {
+  createTag(nextVersion);
   updatePackageJson(nextVersion);
   changelog();
   commitStagedVersionFiles(nextVersion);
-  createTag(nextVersion);
   gitPushHead();
   gitPushTag(nextVersion);
   githubCreateRelease(nextVersion, releaseNotes);
