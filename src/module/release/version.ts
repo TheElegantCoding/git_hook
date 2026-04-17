@@ -14,6 +14,29 @@ const updatePackageJson = (newVersion: string) => {
   fs.writeFileSync(packagePath, `${JSON.stringify(packageContent, null, 2)}\n`);
 };
 
+const getNextVersion = (currentVersion: string, bumpType: 'patch' | 'minor' | 'major'): string => {
+  const [
+    major,
+    minor,
+    patch
+  ] = currentVersion.split('.').map(Number) as [number, number, number];
+
+  switch (bumpType) {
+    case 'patch': {
+      return `${major}.${minor}.${patch + 1}`;
+    }
+    case 'minor': {
+      return `${major}.${minor + 1}.0`;
+    }
+    case 'major': {
+      return `${major + 1}.0.0`;
+    }
+    default: {
+      throw new Error('Invalid bump type');
+    }
+  }
+};
+
 const getCurrentVersion = (logInfo = true): string => {
   const packagePath = path.join(process.cwd(), 'package.json');
 
@@ -28,4 +51,4 @@ const getCurrentVersion = (logInfo = true): string => {
   return packageContent.version;
 };
 
-export { getCurrentVersion, updatePackageJson };
+export { getNextVersion, getCurrentVersion, updatePackageJson };
