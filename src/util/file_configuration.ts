@@ -24,13 +24,14 @@ const getConfiguration = () => {
     throw new Error('Invalid configuration format in .gitlys.json');
   }
 
-  config.commitlint ??= configuration.commitlint;
-  config.lintStaged ??= configuration.lintStaged;
-  config.packageManager ??= configuration.packageManager;
-  config.release ??= configuration.release;
-  config.changelog ??= configuration.changelog;
-
-  return config;
+  return {
+    ...configuration,
+    ...config,
+    commitlint: { ...configuration.commitlint, ...config.commitlint },
+    lintStaged: { ...configuration.lintStaged, ...config.lintStaged },
+    release: { ...configuration.release, ...config.release },
+    changelog: { ...configuration.changelog, ...config.changelog }
+  };
 };
 
 export { getConfiguration };
