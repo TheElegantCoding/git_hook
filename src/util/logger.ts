@@ -12,7 +12,6 @@ const loggerLoader = (message: string) => {
   const loaderMessage = loggerStyle.ansi(message, { color: colorAnsi.blue });
   const loaderInstance = logger.loader({
     message: `${badge} ${loaderMessage}`,
-    position: 'left',
     showTimestamp: true
   });
 
