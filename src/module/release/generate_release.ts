@@ -1,4 +1,4 @@
-import { updateChangelog } from '@src/module/changelog/changelog_file.js';
+import { changelog } from '@src/module/changelog/changelog.js';
 import { commitStagedVersionFiles } from '@src/module/git/git_commit.js';
 import { gitPushTag, gitPushHead } from '@src/module/git/git_push.js';
 import { createTag } from '@src/module/git/git_tag.js';
@@ -6,11 +6,9 @@ import { githubCreateRelease } from '@src/module/git/github_release.js';
 import { updatePackageJson } from '@src/module/release/version.js';
 import { logger } from '@src/util/logger.js';
 
-import type { CommitType } from '@src/type/commit_type.js';
-
-const generateRelease = (nextVersion: string, releaseNotes: string, commits: CommitType[]) => {
+const generateRelease = (nextVersion: string, releaseNotes: string) => {
   updatePackageJson(nextVersion);
-  updateChangelog(nextVersion, commits);
+  changelog();
   commitStagedVersionFiles(nextVersion);
   createTag(nextVersion);
   gitPushHead();
