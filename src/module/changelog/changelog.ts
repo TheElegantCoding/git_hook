@@ -17,7 +17,7 @@ const changelog = (commits?: CommitType[]) => {
     }
 
     updateChangelog(currentVersion, stagedCommits);
-    logger.success(`Changelog updated successfully for version ${currentVersion}`);
+    logger.success(`Changelog updated successfully for version 🚀 ${currentVersion}`);
   } catch (error) {
     logger.error(`Error updating changelog: ${(error as Error).message}`);
     process.exit(1);
