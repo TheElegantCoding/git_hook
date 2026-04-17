@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.6] - 2026-04-17
+
+- fix: correct path for cli binary and update build script entries [[5acf1e8](https://github.com/TheElegantCoding/gitlys/commit/5acf1e8)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.5] - 2026-04-17
 
 - fix: add blank line logger before updating changelog [[90e1b90](https://github.com/TheElegantCoding/gitlys/commit/90e1b90)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
