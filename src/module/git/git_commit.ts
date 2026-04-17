@@ -13,8 +13,8 @@ const commitStagedVersionFiles = (nextVersion: string): void => {
   const config = getConfiguration();
   const changelogPath = config.changelog.changelogPath ?? 'CHANGELOG.md';
   loader.start();
-  execSync(`git add package.json ${changelogPath}`, { stdio: 'inherit' });
-  execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'inherit' });
+  execSync(`git add package.json ${changelogPath}`, { stdio: 'ignore' });
+  execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'ignore' });
   loader.stop();
 };
 
