@@ -2,7 +2,7 @@
   "name": "gitlys",
   "description": "A lightweight, zero-dependency release automation toolkit for Node.js and Bun. Handles semantic versioning, categorized changelogs, and automated GitHub releases",
   "author": "Luis Monsalve",
-  "version": "5.1.0",
+  "version": "1.0.0",
   "homepage": "https://s#readme",
   "repository": {
     "type": "git",
@@ -52,7 +52,6 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
-    "bumpp": "^11.0.1",
     "eslint-config-universal-code": "^1.0.13",
     "logginlys": "^2.0.1",
     "tsup": "^8.5.1",
