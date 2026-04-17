@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.3] - 2026-04-17
+
+- fix: change stdio option to 'ignore' for git add and commit commands [[2aa7cef](https://github.com/TheElegantCoding/gitlys/commit/2aa7cef)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- release: 1.0.2 [[564584f](https://github.com/TheElegantCoding/gitlys/commit/564584f)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.2] - 2026-04-17
 
 - fix: change stdio option to 'inherit' for git add and commit commands [[736f4ac](https://github.com/TheElegantCoding/gitlys/commit/736f4ac)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
