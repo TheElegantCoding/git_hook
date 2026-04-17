@@ -38,8 +38,13 @@ const createEntry = (version: string, fullPath: string, commits: CommitType[]): 
   const gitUrl = getRepoUrl();
 
   const changes = commits.map((commit) => {
-    const { message, hash, author } = commit;
-    return `- ${message} [[${hash}](${gitUrl}/commit/${hash})] by [@${author}](${github}/${author})`;
+    const {
+      cleanMessage,
+      type,
+      hash,
+      author
+    } = commit;
+    return `- **${type}:** ${cleanMessage} [\`${hash}\`](${gitUrl}/commit/${hash}) by [\`@${author}\`](${github}/${author})`;
   });
 
   const newEntry = `## 🚀 Version [${version}] - ${date}\n\n${changes.join('\n')}`;
