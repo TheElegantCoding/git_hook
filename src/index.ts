@@ -1,3 +1,3 @@
-import { validateCommit } from '@src/module/validate_commit.js';
+import { commitLint } from '@src/module/commitlint/commitlint.js';
 
-validateCommit();
+commitLint();
