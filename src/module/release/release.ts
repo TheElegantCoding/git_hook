@@ -12,7 +12,7 @@ const release = async () => {
     isWorkingDirectoryClean();
     const currentVersion = getCurrentVersion();
     const commits = getStagedCommit(currentVersion);
-    const nextVersion = await selectVersion();
+    const nextVersion = await selectVersion(currentVersion);
     const releaseNotes = generateReleaseNotes(nextVersion, commits);
 
     generateRelease(nextVersion, releaseNotes, commits);
