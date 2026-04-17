@@ -15,6 +15,10 @@ const configuration: ConfigurationType = {
   release: {
     releaseToGithub: true
   },
+  changelog: {
+    changelogPath: 'CHANGELOG.md',
+    generateChangelog: true
+  },
   packageManager: 'bun'
 };
 
