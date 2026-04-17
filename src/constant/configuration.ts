@@ -5,7 +5,7 @@ import type { ConfigurationType } from '@src/type/configuration_type.js';
 const configuration: ConfigurationType = {
   commitlint: {
     allowedTypes: commonCommit,
-    maxLength: 80
+    maxLength: 120
   },
   lintStaged: {},
   release: {
