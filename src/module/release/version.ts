@@ -40,10 +40,37 @@ const updateVersion = (
   return `${major}.${minor}.${patch}`;
 };
 
-const getNextVersion = (currentVersion: string, commits: string[]): string => {
+const getNextVersion = (currentVersion: string, commits: string[], bump?: string): string => {
   const featCounter = commits.filter((content) => { return content.toLowerCase().includes('feat:'); }).length;
   const hasBreaking = commits.some((content) => { return content.includes('breaking'); });
   const hasFix = commits.some((content) => { return content.toLowerCase().includes('fix:'); });
+
+  if (bump === 'major') {
+    return updateVersion(
+      currentVersion,
+      featCounter,
+      true,
+      hasFix
+    );
+  }
+
+  if (bump === 'minor') {
+    return updateVersion(
+      currentVersion,
+      10,
+      hasBreaking,
+      hasFix
+    );
+  }
+
+  if (bump === 'patch') {
+    return updateVersion(
+      currentVersion,
+      featCounter,
+      hasBreaking,
+      true
+    );
+  }
 
   return updateVersion(
     currentVersion,
