@@ -28,6 +28,7 @@ const getConfiguration = () => {
   config.lintStaged ??= configuration.lintStaged;
   config.packageManager ??= configuration.packageManager;
   config.release ??= configuration.release;
+  config.changelog ??= configuration.changelog;
 
   return config;
 };
