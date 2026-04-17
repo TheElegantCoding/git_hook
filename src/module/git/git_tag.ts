@@ -3,7 +3,7 @@ import { execSync } from 'node:child_process';
 
 const createTag = (version: string) => {
   execSync(`git tag v${version}`, { stdio: 'ignore' });
-  logger.info(`Creating git tag v${version}...`);
+  logger.info(`Creating git tag v${version}...`, { blankAbove: true });
 };
 
 const tagExists = (): boolean => {
