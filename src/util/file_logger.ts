@@ -1,14 +1,32 @@
 /* eslint-disable ts/no-unnecessary-condition */
+import { commitType } from '@src/constant/commit_constant.js';
 import { fileStyle } from '@src/constant/file_style.js';
 import {
-  icon,
   colorAnsi,
-  LogManager
+  loggerIcon,
+  LogManager,
+  loggerStyle
 } from 'logginlys';
 
+import type { CommitType } from '@src/type/commit_type.js';
 import type { LoggerStyleParameters } from 'logginlys';
 
-class FileLogger extends LogManager {
+class ReportLogger extends LogManager {
+  commit (commit: CommitType) {
+    const commitIcon = loggerStyle.ansi('\uf172', { color: colorAnsi.blue });
+    const message = loggerStyle.ansi(commit.cleanMessage ?? '', { color: colorAnsi.white });
+    const hash = loggerStyle.ansi(`[${commit.hash}]`, { color: colorAnsi.gray });
+    const type = loggerStyle.ansi(commit.type ?? '', { color: commitType[commit.type as keyof typeof commitType]?.color ?? colorAnsi.white });
+    const messageWithIcon = `${commitIcon}  ${hash} ${type}: ${message}`;
+
+    const logStyle: LoggerStyleParameters = {
+      showBadge: false,
+      showTimestamp: false
+    };
+
+    this.custom(messageWithIcon, logStyle);
+  }
+
   file (file: File, largeFileName: string) {
     const fileSize = `${(file.size / 1024).toFixed(2)} Kb`;
     const fileExtension = file.name.split('.').pop() ?? '';
@@ -19,14 +37,15 @@ class FileLogger extends LogManager {
       showBadge: false
     };
 
-    const iconMessage = `${colorAnsi.green}${icon.check} ${style.color}${style.icon}${colorAnsi.reset}`;
-    const message = `${colorAnsi.white}${file.name}${colorAnsi.reset}`;
-    const messageWithIcon = `${iconMessage} ${message} ${space} (${fileSize})`;
+    const check = loggerStyle.ansi(loggerIcon.check, { color: colorAnsi.green });
+    const fileIcon = loggerStyle.ansi(style.icon, { color: style.color });
+    const message = loggerStyle.ansi(file.name, { color: colorAnsi.white });
+    const messageWithIcon = `${check} ${fileIcon} ${message} ${space} (${fileSize})`;
 
     this.custom(messageWithIcon, { ...logStyle });
   }
 }
 
-const fileLogger = new FileLogger();
+const reportLogger = new ReportLogger();
 
-export { fileLogger };
+export { reportLogger };
