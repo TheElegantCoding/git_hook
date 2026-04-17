@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.10] - 2026-04-17
+
+- **fix:** improve Git directory checks and update error messages in install script [`7508f86`](https://github.com/TheElegantCoding/gitlys/commit/7508f86) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **refactor:** restructure CLI command handling and improve help menu formatting [`9b08642`](https://github.com/TheElegantCoding/gitlys/commit/9b08642) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.9] - 2026-04-17
 
 - **fix:** update toolkit name from Astralys to Gitlys in CLI help message [`503c6ed`](https://github.com/TheElegantCoding/gitlys/commit/503c6ed) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
