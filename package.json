@@ -55,7 +55,7 @@
   },
   "scripts": {
     "build": "tsup --format esm --clean --minify --dts",
-    "postinstall": "bun src/util/install.ts",
+    "postinstall": "bun src/playground/install.ts",
     "preinstall": "npx only-allow bun",
     "commit:check": "bun src/playground/lint_commit.ts",
     "lint-staged:check": "bun src/playground/lint_staged.ts",
