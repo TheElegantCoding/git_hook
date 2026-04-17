@@ -1,15 +1,21 @@
 import { tagExists } from '@src/module/git/git_tag.js';
+import { getConfiguration } from '@src/util/file_configuration.js';
 import { reportLogger } from '@src/util/file_logger.js';
-import { logger } from '@src/util/logger.js';
+import { logger, loggerLoader } from '@src/util/logger.js';
 import { colorAnsi, loggerStyle } from 'logginlys';
 import { execSync } from 'node:child_process';
 
 import type { CommitType } from '@src/type/commit_type.js';
 
 const commitStagedVersionFiles = (nextVersion: string): void => {
-  logger.info(`Committing staged files for version ${nextVersion}...`, { blankAbove: true });
-  execSync('git add package.json CHANGELOG.md', { stdio: 'ignore' });
+  logger.blank();
+  const loader = loggerLoader(`Committing staged files for version ${nextVersion}...`);
+  const config = getConfiguration();
+  const changelogPath = config.changelog.changelogPath ?? 'CHANGELOG.md';
+  loader.start();
+  execSync(`git add package.json ${changelogPath}`, { stdio: 'ignore' });
   execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'ignore' });
+  loader.stop();
 };
 
 const checkStagedCommits = (commitStaged: CommitType[]) => {
