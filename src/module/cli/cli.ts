@@ -8,15 +8,21 @@ import { logger } from '@src/util/logger.js';
 const args = process.argv.slice(2);
 const command = args[0];
 
+const isMajor = args.includes('--major');
+const isMinor = args.includes('--minor');
+const isPatch = args.includes('--patch');
+
 const helpMenu = `
     🚀 Gitlys Toolkit
-    Usage: gitlys [command]
+    Usage: gitlys [command] [options]
 
     Commands:
-      init          Configura Gitlys en el repo (Hooks y Config).
-      lint-staged   Ejecuta validaciones en archivos preparados.
-      release       Analiza commits, genera changelog y sube a GitHub.
-      --help        Muestra esta ayuda.
+      init          Config Gitlys in your repository.
+      release       Analyze commits and generate release.
+        --major     Force a MAJOR version increment.
+        --minor     Force a MINOR version increment.
+        --patch     Force a PATCH version increment.
+      --help        Show this help.
 `;
 
 if (args.includes('--help') || args.includes('-h')) {
@@ -30,7 +36,12 @@ switch (command) {
     break;
   }
   case 'release': {
-    release();
+    let bumpType;
+    if (isMajor) { bumpType = 'major'; }
+    if (isMinor) { bumpType = 'minor'; }
+    if (isPatch) { bumpType = 'patch'; }
+
+    release(bumpType);
     break;
   }
   default: {
