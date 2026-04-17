@@ -37,6 +37,10 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./lint-staged": {
+      "types": "./dist/lint_staged.d.ts",
+      "import": "./dist/lint_staged.js"
     }
   },
   "main": "./dist/index.js",
@@ -50,7 +54,7 @@
     "bun": ">=1.1.0"
   },
   "scripts": {
-    "build": "tsup --entry.index=src/index.ts --entry.cli=src/module/cli/cli.ts --format esm --clean --minify --dts",
+    "build": "tsup --format esm --clean --minify --dts",
     "postinstall": "git config core.hooksPath ./.git/hooks",
     "preinstall": "npx only-allow bun",
     "install": "bun src/util/install.ts",
