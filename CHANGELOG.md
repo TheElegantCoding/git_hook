@@ -16,6 +16,29 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.0] - 2026-04-17
+
+- **feat:** add initial install script to initialize the application [`0803f05`](https://github.com/TheElegantCoding/gitlys/commit/0803f05) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update postinstall script to point to the correct install file [`f0ceab9`](https://github.com/TheElegantCoding/gitlys/commit/f0ceab9) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** increase maxLength for commitlint configuration to 120 [`7804958`](https://github.com/TheElegantCoding/gitlys/commit/7804958) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** refactor GitHub release logic to improve checks for GitHub CLI [`cc378a5`](https://github.com/TheElegantCoding/gitlys/commit/cc378a5) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add isGhInstalled function to check for GitHub CLI installation [`3e8c7e3`](https://github.com/TheElegantCoding/gitlys/commit/3e8c7e3) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update version in package.json to 1.0.11 [`9468109`](https://github.com/TheElegantCoding/gitlys/commit/9468109) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **chore:** remove outdated minor version release notes from CHANGELOG [`bc84366`](https://github.com/TheElegantCoding/gitlys/commit/bc84366) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** update selectVersion to accept currentVersion and return next version [`09e0ecb`](https://github.com/TheElegantCoding/gitlys/commit/09e0ecb) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add getNextVersion function for version bumping [`8f8e94a`](https://github.com/TheElegantCoding/gitlys/commit/8f8e94a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** pass current version to selectVersion function in release process [`08e6646`](https://github.com/TheElegantCoding/gitlys/commit/08e6646) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **release:** minor [`db12ade`](https://github.com/TheElegantCoding/gitlys/commit/db12ade) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **refactor:** remove version bump options from release command [`e67496d`](https://github.com/TheElegantCoding/gitlys/commit/e67496d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add version selection functionality to CLI [`caf65ef`](https://github.com/TheElegantCoding/gitlys/commit/caf65ef) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update release function to use async version selection [`2561640`](https://github.com/TheElegantCoding/gitlys/commit/2561640) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **refactor:** remove unused versioning functions from release module [`5ce0f22`](https://github.com/TheElegantCoding/gitlys/commit/5ce0f22) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** await release function for proper asynchronous execution [`12e23a9`](https://github.com/TheElegantCoding/gitlys/commit/12e23a9) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update postinstall script and dependencies [`4686c37`](https://github.com/TheElegantCoding/gitlys/commit/4686c37) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** clack dependencie [`35deea6`](https://github.com/TheElegantCoding/gitlys/commit/35deea6) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **release:** 1.0.12 [`c67ad3a`](https://github.com/TheElegantCoding/gitlys/commit/c67ad3a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** format help menu for better readability [`660aa78`](https://github.com/TheElegantCoding/gitlys/commit/660aa78) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.12] - 2026-04-17
 
 - **fix:** format help menu for better readability [`660aa78`](https://github.com/TheElegantCoding/gitlys/commit/660aa78) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
