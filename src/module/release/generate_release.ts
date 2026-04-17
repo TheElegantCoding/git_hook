@@ -16,7 +16,7 @@ const generateRelease = (nextVersion: string, releaseNotes: string, commits: Com
   gitPushHead();
   gitPushTag(nextVersion);
   githubCreateRelease(nextVersion, releaseNotes);
-  logger.success(`Release process completed successfully! New version: ${nextVersion}`);
+  logger.success(`Release process completed successfully! New version: 🚀 ${nextVersion}`);
 };
 
 export { generateRelease };
