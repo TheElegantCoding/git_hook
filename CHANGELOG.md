@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.5] - 2026-04-17
+
+- fix: add blank line logger before updating changelog [[90e1b90](https://github.com/TheElegantCoding/gitlys/commit/90e1b90)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.4] - 2026-04-17
 
 - fix: move createTag call to after updating package.json in release process [[27581a7](https://github.com/TheElegantCoding/gitlys/commit/27581a7)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
