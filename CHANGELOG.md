@@ -16,6 +16,16 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.11] - 2026-04-17
+
+- **chore:** remove copilot instructions file [`b4d2da6`](https://github.com/TheElegantCoding/gitlys/commit/b4d2da6) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update exports for lint-staged and simplify build script [`97d8d55`](https://github.com/TheElegantCoding/gitlys/commit/97d8d55) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update CLI help menu and enhance release command to accept version [`3803e6d`](https://github.com/TheElegantCoding/gitlys/commit/3803e6d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update release function to accept version bump parameter [`45e7a8a`](https://github.com/TheElegantCoding/gitlys/commit/45e7a8a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** enhance getNextVersion function to support version bump types [`6a4c6c6`](https://github.com/TheElegantCoding/gitlys/commit/6a4c6c6) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update entry configuration format in tsup.config.ts [`de4bb13`](https://github.com/TheElegantCoding/gitlys/commit/de4bb13) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update paths to use the dist directory for install and lint-staged scripts [`25c08f7`](https://github.com/TheElegantCoding/gitlys/commit/25c08f7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.10] - 2026-04-17
 
 - **fix:** improve Git directory checks and update error messages in install script [`7508f86`](https://github.com/TheElegantCoding/gitlys/commit/7508f86) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
