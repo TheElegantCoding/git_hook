@@ -14,7 +14,7 @@ const release = () => {
     const nextVersion = getNextVersion(currentVersion, commits.map((commit) => { return commit.message; }) as string[]);
     const releaseNotes = generateReleaseNotes(nextVersion, commits);
 
-    generateRelease(nextVersion, releaseNotes, commits);
+    generateRelease(nextVersion, releaseNotes);
   } catch (error) {
     logger.error(`Error during release process: ${(error as Error).message}`);
     process.exit(1);
