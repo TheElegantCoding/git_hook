@@ -7,8 +7,8 @@ const args = process.argv.slice(2);
 
 if (args.includes('--help') || args.includes('-h')) {
   console.log(`
-    🚀 Astralys Toolkit
-    Usage: astralys [command]
+    🚀 Gitlys Toolkit
+    Usage: gitlys [command]
 
     Commands:
       release    Analiza commits, genera changelog y sube a GitHub.
@@ -20,5 +20,5 @@ if (args.includes('--help') || args.includes('-h')) {
 if (args.includes('release')) {
   release();
 } else {
-  logger.error('Comando no reconocido. Prueba con: astralys release');
+  logger.error('Comando no reconocido. Prueba con: gitlys release');
 }
