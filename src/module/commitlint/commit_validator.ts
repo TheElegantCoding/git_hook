@@ -32,8 +32,8 @@ const validateCommit = (commandMessage?: string) => {
   const commitMessage = getCommitMessage(commandMessage);
 
   checkCommitType(commitMessage);
-  checkCommitLength(commitMessage, commitlint?.maxLength ?? 80);
-  checkCommitPattern(commitMessage, commitlint?.maxLength ?? 80, commitlint?.allowedTypes ?? []);
+  checkCommitLength(commitMessage, commitlint.maxLength ?? 80);
+  checkCommitPattern(commitMessage, commitlint.maxLength ?? 80, commitlint.allowedTypes ?? []);
 
   logger.success('Commit message is valid.');
 };
