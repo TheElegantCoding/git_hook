@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.8] - 2026-04-17
+
+- **fix:** enhance success message in changelog function to include emoji [`ccca680`](https://github.com/TheElegantCoding/gitlys/commit/ccca680) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** enhance success message in generateRelease function to include emoji [`6a797c5`](https://github.com/TheElegantCoding/gitlys/commit/6a797c5) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.7] - 2026-04-17
 
 - **fix:** update image path in README to correct location [`5e64f60`](https://github.com/TheElegantCoding/gitlys/commit/5e64f60) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
