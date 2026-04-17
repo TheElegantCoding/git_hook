@@ -2,11 +2,11 @@
   "name": "gitlys",
   "description": "A lightweight, zero-dependency release automation toolkit for Node.js and Bun. Handles semantic versioning, categorized changelogs, and automated GitHub releases",
   "author": "Luis Monsalve",
-  "version": "1.1.0",
-  "homepage": "https://s#readme",
+  "version": "0.0.0",
+  "homepage": "https://github.com/TheElegantCoding/gitlys#readme",
   "repository": {
     "type": "git",
-    "url": "git+https:"
+    "url": "git+https://github.com/TheElegantCoding/gitlys.git"
   },
   "keywords": [
     "logger",
@@ -19,7 +19,7 @@
     "console"
   ],
   "bugs": {
-    "url": "https:/"
+    "url": "https://github.com/TheElegantCoding/gitlys/issues"
   },
   "type": "module",
   "exports": {
@@ -48,12 +48,13 @@
     "changelog:check": "bun src/playground/changelog.ts",
     "release:check": "bun src/playground/release.ts",
     "lint": "eslint --fix",
-    "release": "bun run build && bun src/playground/release.ts"
+    "release": "bun run build && bun src/playground/release.ts",
+    "publish": "npm publish"
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
     "eslint-config-universal-code": "^1.0.13",
-    "logginlys": "^2.0.1",
+    "logginlys": "^2.0.2",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
