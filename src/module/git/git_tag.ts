@@ -2,8 +2,8 @@ import { logger } from '@src/util/logger.js';
 import { execSync } from 'node:child_process';
 
 const createTag = (version: string) => {
+  logger.info(`Creating git tag v${version}`, { blankAbove: true });
   execSync(`git tag v${version}`, { stdio: 'ignore' });
-  logger.info(`Creating git tag v${version}...`, { blankAbove: true });
 };
 
 const tagExists = (): boolean => {
