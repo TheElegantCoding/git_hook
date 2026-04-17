@@ -16,6 +16,12 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.4] - 2026-04-17
+
+- fix: move createTag call to after updating package.json in release process [[27581a7](https://github.com/TheElegantCoding/gitlys/commit/27581a7)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update entry path for CLI module in tsup configuration [[127fbc2](https://github.com/TheElegantCoding/gitlys/commit/127fbc2)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- release: 1.0.3 [[79170f2](https://github.com/TheElegantCoding/gitlys/commit/79170f2)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.3] - 2026-04-17
 
 - fix: change stdio option to 'ignore' for git add and commit commands [[2aa7cef](https://github.com/TheElegantCoding/gitlys/commit/2aa7cef)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
