@@ -1,7 +1,7 @@
 import { changelogConstant } from '@src/constant/changelog.js';
 import { getRepoUrl } from '@src/module/git/git_repo_url.js';
 import { getConfiguration } from '@src/util/file_configuration.js';
-import { logger } from '@src/util/logger.js';
+import { logger, loggerLoader } from '@src/util/logger.js';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -9,9 +9,9 @@ import type { CommitType } from '@src/type/commit_type.js';
 
 const createChangelogFile = () => {
   const configuration = getConfiguration();
-  const fullPath = path.join(process.cwd(), configuration.changelog?.changelogPath ?? 'CHANGELOG.md');
+  const fullPath = path.join(process.cwd(), configuration.changelog.changelogPath ?? 'CHANGELOG.md');
 
-  if (!configuration.changelog?.generateChangelog) {
+  if (!configuration.changelog.generateChangelog) {
     return;
   }
 
@@ -48,21 +48,32 @@ const createEntry = (version: string, fullPath: string, commits: CommitType[]): 
   return updatedContent;
 };
 
-const updateChangelog = (version: string, commits: CommitType[]) => {
-  const configuration = getConfiguration();
-  const fullPath = path.join(process.cwd(), configuration.changelog?.changelogPath ?? 'CHANGELOG.md');
-
+const validChangelog = (fullPath: string, version: string): boolean => {
   if (!fs.existsSync(fullPath)) {
-    return;
+    return false;
   }
 
   if (checkVersionExists(version, fullPath)) {
+    return false;
+  }
+
+  return true;
+};
+
+const updateChangelog = (version: string, commits: CommitType[]) => {
+  const configuration = getConfiguration();
+  const fullPath = path.join(process.cwd(), configuration.changelog.changelogPath ?? 'CHANGELOG.md');
+
+  if (!validChangelog(fullPath, version)) {
     return;
   }
 
-  logger.info(`Updating changelog for version ${version} with ${commits.length} commits...`);
+  const loader = loggerLoader(`Updating changelog for version ${version} with ${commits.length} commits...`);
+
+  loader.start();
   const updatedContent = createEntry(version, fullPath, commits);
   fs.writeFileSync(fullPath, updatedContent);
+  loader.stop();
 };
 
 export { updateChangelog, checkVersionExists, createChangelogFile };
