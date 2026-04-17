@@ -16,6 +16,16 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [minor] - 2026-04-17
+
+- **refactor:** remove version bump options from release command [`e67496d`](https://github.com/TheElegantCoding/gitlys/commit/e67496d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add version selection functionality to CLI [`caf65ef`](https://github.com/TheElegantCoding/gitlys/commit/caf65ef) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update release function to use async version selection [`2561640`](https://github.com/TheElegantCoding/gitlys/commit/2561640) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **refactor:** remove unused versioning functions from release module [`5ce0f22`](https://github.com/TheElegantCoding/gitlys/commit/5ce0f22) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** await release function for proper asynchronous execution [`12e23a9`](https://github.com/TheElegantCoding/gitlys/commit/12e23a9) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update postinstall script and dependencies [`4686c37`](https://github.com/TheElegantCoding/gitlys/commit/4686c37) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** clack dependencie [`35deea6`](https://github.com/TheElegantCoding/gitlys/commit/35deea6) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.12] - 2026-04-17
 
 - **fix:** format help menu for better readability [`660aa78`](https://github.com/TheElegantCoding/gitlys/commit/660aa78) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
