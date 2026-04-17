@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.9] - 2026-04-17
+
+- **fix:** update toolkit name from Astralys to Gitlys in CLI help message [`503c6ed`](https://github.com/TheElegantCoding/gitlys/commit/503c6ed) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.8] - 2026-04-17
 
 - **fix:** enhance success message in changelog function to include emoji [`ccca680`](https://github.com/TheElegantCoding/gitlys/commit/ccca680) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
