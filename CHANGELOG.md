@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.12] - 2026-04-17
+
+- **fix:** format help menu for better readability [`660aa78`](https://github.com/TheElegantCoding/gitlys/commit/660aa78) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.11] - 2026-04-17
 
 - **chore:** remove copilot instructions file [`b4d2da6`](https://github.com/TheElegantCoding/gitlys/commit/b4d2da6) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
