@@ -17,12 +17,12 @@ const helpMenu = `
     Usage: gitlys [command] [options]
 
     Commands:
-      init          Config Gitlys in your repository.
-      release       Analyze commits and generate release.
-        --major     Force a MAJOR version increment.
-        --minor     Force a MINOR version increment.
-        --patch     Force a PATCH version increment.
-      --help        Show this help.
+      init         Config Gitlys in your repository.
+      release      Analyze commits and generate release.
+        --major    Force a MAJOR version increment.
+        --minor    Force a MINOR version increment.
+        --patch    Force a PATCH version increment.
+      --help       Show this help.
 `;
 
 if (args.includes('--help') || args.includes('-h')) {
