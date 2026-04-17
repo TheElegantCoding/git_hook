@@ -7,19 +7,15 @@ const configuration: ConfigurationType = {
     allowedTypes: commonCommit,
     maxLength: 80
   },
-  lintStaged: {
-    '*.{ts,js,jsx,tsx,json,html,yml,yaml,astro}': 'bunx eslint --fix',
-    '*.{css,scss}': 'bunx stylelint --fix',
-    '*.{tf,tfvars}': 'terraform fmt'
-  },
+  lintStaged: {},
   release: {
-    releaseToGithub: true
+    releaseToGithub: false
   },
   changelog: {
     changelogPath: 'CHANGELOG.md',
-    generateChangelog: true
+    generateChangelog: false
   },
-  packageManager: 'bun'
+  packageManager: 'npm'
 };
 
 export { configuration };
