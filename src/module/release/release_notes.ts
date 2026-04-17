@@ -28,8 +28,13 @@ const generateReleaseNotes = (version: string, commits: CommitType[]) => {
     const header = `### ${config.icon} ${config.label}`;
 
     const body = commitsList.map((commit) => {
-      const { message, hash, author } = commit;
-      return `- ${message} [[${hash}](${gitUrl}/commit/${hash})] by [@${author}](${github}/${author})`;
+      const {
+        hash,
+        type: commitTypeMessage,
+        author,
+        cleanMessage
+      } = commit;
+      return `- **${commitTypeMessage}:** ${cleanMessage} [\`${hash}\`](${gitUrl}/commit/${hash}) by [\`@${author}\`](${github}/${author})`;
     }).join('\n');
 
     return `${header}\n\n${body}`;
