@@ -1,13 +1,15 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: [
-    'src/index.ts',
-    'src/module/cli/cli.ts',
-    'src/util/install.ts'
-  ],
+  entry: {
+    index: 'src/index.ts',
+    cli: 'src/module/cli/cli.ts',
+    install: 'src/util/install.ts',
+    lint_staged: 'src/lint_staged.ts'
+  },
   format: ['esm', 'cjs'],
   dts: true,
+  splitting: false,
   clean: true,
   minify: true
 });
