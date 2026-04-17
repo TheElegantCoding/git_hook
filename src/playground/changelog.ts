@@ -1,3 +1,3 @@
-import { changelog } from '@src/module/changelog.js';
+import { changelog } from '@src/module/changelog/changelog.js';
 
 changelog();
