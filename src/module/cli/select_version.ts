@@ -1,11 +1,12 @@
 import { select } from '@inquirer/prompts';
+import { getNextVersion } from '@src/module/release/version.js';
 import { logger } from '@src/util/logger.js';
 
-const selectVersion = async (): Promise<string> => {
+const selectVersion = async (currentVersion: string): Promise<string> => {
   logger.blank();
 
   try {
-    const version = await select({
+    const version: 'patch' | 'minor' | 'major' = await select({
       message: 'Choose a version bump:',
       choices: [
         { name: 'Major', value: 'major', description: 'Breaking changes that may not be backward compatible' },
@@ -14,7 +15,7 @@ const selectVersion = async (): Promise<string> => {
       ]
     });
 
-    return version;
+    return getNextVersion(currentVersion, version);
   } catch {
     throw new Error('Failed to select version');
   }
