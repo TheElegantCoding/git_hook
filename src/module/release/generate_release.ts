@@ -6,10 +6,12 @@ import { githubCreateRelease } from '@src/module/git/github_release.js';
 import { updatePackageJson } from '@src/module/release/version.js';
 import { logger } from '@src/util/logger.js';
 
-const generateRelease = (nextVersion: string, releaseNotes: string) => {
+import type { CommitType } from '@src/type/commit_type.js';
+
+const generateRelease = (nextVersion: string, releaseNotes: string, commits: CommitType[]) => {
   createTag(nextVersion);
   updatePackageJson(nextVersion);
-  changelog();
+  changelog(commits);
   commitStagedVersionFiles(nextVersion);
   gitPushHead();
   gitPushTag(nextVersion);
