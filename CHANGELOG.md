@@ -16,6 +16,23 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.1] - 2026-04-17
+
+- fix: refactor changelog function to improve staged commits handling [[2a172b1](https://github.com/TheElegantCoding/gitlys/commit/2a172b1)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: add blankAbove option to logger info in createTag function [[331d849](https://github.com/TheElegantCoding/gitlys/commit/331d849)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update changelog function to accept optional commits parameter [[b147e05](https://github.com/TheElegantCoding/gitlys/commit/b147e05)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update generateRelease function to accept commits parameter for changelog [[6af72b6](https://github.com/TheElegantCoding/gitlys/commit/6af72b6)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: include commits in generateRelease call for improved release processing [[66709fa](https://github.com/TheElegantCoding/gitlys/commit/66709fa)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: move createTag call to the beginning of generateRelease function [[5b2dba0](https://github.com/TheElegantCoding/gitlys/commit/5b2dba0)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update .gitlys.json to refine linting and release configurations [[2ebf84c](https://github.com/TheElegantCoding/gitlys/commit/2ebf84c)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: enhance changelog update process with improved validation and logging [[1555b48](https://github.com/TheElegantCoding/gitlys/commit/1555b48)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: remove optional chaining for commitlint properties in validateCommit [[0275339](https://github.com/TheElegantCoding/gitlys/commit/0275339)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: improve commit staging process with enhanced logging and dynamic [[441084a](https://github.com/TheElegantCoding/gitlys/commit/441084a)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: enhance logging for GitHub release creation process [[061e44e](https://github.com/TheElegantCoding/gitlys/commit/061e44e)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: refactor getConfiguration to streamline merging of configuration properties [[eb11967](https://github.com/TheElegantCoding/gitlys/commit/eb11967)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update filesToPass logic in runLintCommand for better handling [[3fac064](https://github.com/TheElegantCoding/gitlys/commit/3fac064)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+- fix: update configuration settings for lintStaged and release options [[120529a](https://github.com/TheElegantCoding/gitlys/commit/120529a)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.0] - 2026-04-17
 
 - fix: update logginlys dependency to version 2.0.2 [[ea592e2](https://github.com/TheElegantCoding/gitlys/commit/ea592e2)] by [@TheElegantCoding](https://github.com/TheElegantCoding)
