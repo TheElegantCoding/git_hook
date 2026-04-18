@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.3] - 2026-04-18
+
+- **fix:** replace npx tsx with node for script execution in installCommand [`0ce5acc`](https://github.com/TheElegantCoding/gitlys/commit/0ce5acc) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.2] - 2026-04-18
 
 - **fix:** remove install entry from tsup configuration [`2e60e3f`](https://github.com/TheElegantCoding/gitlys/commit/2e60e3f) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
