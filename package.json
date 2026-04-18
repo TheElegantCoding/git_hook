@@ -61,6 +61,7 @@
     "lint-staged:check": "bun src/playground/lint_staged.ts",
     "changelog:check": "bun src/playground/changelog.ts",
     "release:check": "bun src/playground/release.ts",
+    "install:check": "bun dist/install.js",
     "lint": "eslint --fix",
     "release": "bun run build && bun src/playground/release.ts",
     "publish": "npm publish"
@@ -69,7 +70,7 @@
     "@inquirer/prompts": "^8.4.1",
     "@types/node": "^25.5.2",
     "eslint-config-universal-code": "^1.0.13",
-    "logginlys": "^3.0.0",
+    "logginlys": "^3.0.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
