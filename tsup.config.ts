@@ -4,7 +4,7 @@ export default defineConfig({
   entry: {
     index: 'src/index.ts',
     cli: 'src/module/cli/cli.ts',
-    install: 'src/util/install.ts',
+    install: 'src/module/cli/install.ts',
     lint_staged: 'src/lint_staged.ts'
   },
   format: ['esm', 'cjs'],
