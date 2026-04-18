@@ -24,8 +24,8 @@ const installCommand = (gitHooksDirectory: string) => {
   const precommitHook = path.join(gitHooksDirectory, 'pre-commit');
   const isProduction = import.meta.url.includes('node_modules');
   const configuration = getConfiguration();
-  const install = isProduction ? 'npx tsx ./node_modules/gitlys/dist/index.js "$1"' : `${configuration.packageManager} src/index.ts "$1"`;
-  const lintStagedCommand = isProduction ? 'npx tsx ./node_modules/gitlys/dist/lint_staged.js "$1"' : `${configuration.packageManager} src/lint_staged.ts`;
+  const install = isProduction ? 'node ./node_modules/gitlys/dist/index.js "$1"' : `${configuration.packageManager} src/index.ts "$1"`;
+  const lintStagedCommand = isProduction ? 'node ./node_modules/gitlys/dist/lint_staged.js "$1"' : `${configuration.packageManager} src/lint_staged.ts`;
 
   const hookContent = `#!/bin/bash\n\n${install}`;
   const preCommitContent = `#!/bin/bash\n\n${lintStagedCommand}`;
