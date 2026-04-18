@@ -16,6 +16,12 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.2] - 2026-04-18
+
+- **fix:** remove install entry from tsup configuration [`2e60e3f`](https://github.com/TheElegantCoding/gitlys/commit/2e60e3f) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update install entry path in tsup configuration [`ed0b1a8`](https://github.com/TheElegantCoding/gitlys/commit/ed0b1a8) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add install check script and update logginlys dependency version [`20e2ec3`](https://github.com/TheElegantCoding/gitlys/commit/20e2ec3) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.1] - 2026-04-17
 
 - **fix:** update logger message in createTag function for clarity [`5cd76b0`](https://github.com/TheElegantCoding/gitlys/commit/5cd76b0) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
