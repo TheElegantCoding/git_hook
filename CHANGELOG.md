@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.4] - 2026-04-18
+
+- **fix:** simplify build script in package.json [`49e54fa`](https://github.com/TheElegantCoding/gitlys/commit/49e54fa) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove CommonJS format from tsup configuration [`9675241`](https://github.com/TheElegantCoding/gitlys/commit/9675241) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.3] - 2026-04-18
 
 - **fix:** replace npx tsx with node for script execution in installCommand [`0ce5acc`](https://github.com/TheElegantCoding/gitlys/commit/0ce5acc) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
