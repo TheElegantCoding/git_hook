@@ -73,7 +73,6 @@ const updateChangelog = (version: string, commits: CommitType[]) => {
     return;
   }
 
-  logger.blank();
   const loader = loggerLoader(`Updating changelog for version ${version} with ${commits.length} commits...`);
 
   loader.start();
