@@ -1,4 +1,4 @@
-<img src="./.github/asset/illustration/wave_header.svg" alt="wave" width="100%" align="center"/>
+<img src="./.github/asset/illustration/wave_header.svg" alt="wave" width="100%" />
 
 <h1 align="center">
   <img src="./.github/asset/icon/git.svg" width="28px"  />
@@ -11,7 +11,6 @@
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
 <pre align="center">
@@ -22,10 +21,9 @@
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
-<img src="./.github/asset/illustration/gitlys_cover.svg" width="100%" align="center" />
+<img src="./.github/asset/illustration/gitlys_cover.svg" width="100%" />
 
 <br />
 
@@ -42,7 +40,6 @@
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
 <h2 id="about">
@@ -64,7 +61,6 @@ The ultimate Git workflow toolkit for Node and Bun. Orchestrate your entire rele
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
 <h2 id="table-of-content">
@@ -82,7 +78,6 @@ The ultimate Git workflow toolkit for Node and Bun. Orchestrate your entire rele
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
 <h2 id="requirements">
@@ -100,7 +95,6 @@ The ultimate Git workflow toolkit for Node and Bun. Orchestrate your entire rele
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center" 
 />
 
 <h1 id="installation">
@@ -138,7 +132,6 @@ yarn i -D logginlys
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center"
 />
 
 <h2 id="features">
@@ -159,7 +152,6 @@ yarn i -D logginlys
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center"
 />
 
 <h2 id="usage">
@@ -197,7 +189,6 @@ I recommend you to add this command in your `package.json` for more comfortable 
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center"
 />
 
 <h2 id="configuration">
@@ -242,7 +233,6 @@ The configuration of gitlys is really simple, create a file named `.gitlys.json`
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center"
 />
 
 <pre align="center">
@@ -253,7 +243,6 @@ The configuration of gitlys is really simple, create a file named `.gitlys.json`
   src="./.github/asset/illustration/divider.svg" 
   alt="divider" 
   width="100%" 
-  align="center"
 />
 
 <pre align="center">
@@ -264,4 +253,4 @@ The configuration of gitlys is really simple, create a file named `.gitlys.json`
   <img src="./.github/asset/illustration/astralys_logo.svg" width="120px" align="center" />
 </div>
 
-<img src="./.github/asset/illustration/wave_footer.svg" width="100%" align="center" />
+<img src="./.github/asset/illustration/wave_footer.svg" width="100%" />
