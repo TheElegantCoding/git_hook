@@ -8,7 +8,6 @@ import { execSync } from 'node:child_process';
 import type { CommitType } from '@src/type/commit_type.js';
 
 const commitStagedVersionFiles = (nextVersion: string): void => {
-  logger.blank();
   const loader = loggerLoader(`Committing staged files for version ${nextVersion}...`);
   const config = getConfiguration();
   const changelogPath = config.changelog.changelogPath ?? 'CHANGELOG.md';
@@ -31,9 +30,7 @@ const checkStagedCommits = (commitStaged: CommitType[]) => {
 };
 
 const getStagedCommit = (currentVersion: string, reportCommits = true) => {
-  let commits: string[] = [];
-
-  commits = tagExists()
+  const commits = tagExists()
     ? execSync(`git log v${currentVersion}..HEAD --pretty=format:"%s|%h|%an"`).toString().trim().split('\n')
     : execSync('git log --pretty=format:"%s|%h|%an"').toString().trim().split('\n');
 
@@ -56,11 +53,12 @@ const getStagedCommit = (currentVersion: string, reportCommits = true) => {
   });
 
   const filteredResult = checkStagedCommits(result);
-
   const gitIcon = loggerStyle.ansi('\udb80\udea2', { color: colorAnsi.red });
+
   if (reportCommits) {
     logger.info(`Found ${gitIcon}${colorAnsi.blue} ${result.length} staged commits, since last version:`, { blankBelow: true });
     result.forEach((entry) => { reportLogger.commit(entry); });
+    logger.blank();
   }
 
   return filteredResult;
