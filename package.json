@@ -63,8 +63,8 @@
     "release:check": "bun src/playground/release.ts",
     "install:check": "bun dist/install.js",
     "lint": "eslint --fix",
-    "release": "bun run build && bun src/playground/release.ts",
-    "publish": "npm publish"
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && bun src/playground/release.ts"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.4.1"
