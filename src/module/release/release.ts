@@ -8,7 +8,7 @@ import { logger } from '@src/util/logger.js';
 
 const release = async () => {
   try {
-    logger.info('Releasing new version');
+    logger.info('Releasing new version', { blankAbove: true });
     isWorkingDirectoryClean();
     const currentVersion = getCurrentVersion();
     const commits = getStagedCommit(currentVersion);
