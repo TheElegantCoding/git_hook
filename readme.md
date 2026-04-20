@@ -1,7 +1,7 @@
 <img src="./.github/asset/illustration/wave_header.svg" alt="wave" width="100%" />
 
-<h1 align="center">
-  <img src="./.github/asset/icon/git.svg" width="28px"  />
+<h1 id="top" align="center">
+  <img src="./.github/asset/icon/git.svg" width="28px" align="center" />
   Gitlys
 </h1>
 
