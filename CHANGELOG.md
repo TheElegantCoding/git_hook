@@ -16,6 +16,26 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.5] - 2026-04-20
+
+- **fix:** add blank option to logger.info in release function for improved readability [`f6c2405`](https://github.com/TheElegantCoding/gitlys/commit/f6c2405) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove unnecessary blank option from logger.info in createTag function [`37fcc54`](https://github.com/TheElegantCoding/gitlys/commit/37fcc54) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove unnecessary logger.blank() call and streamline getStagedCommit function [`7b87881`](https://github.com/TheElegantCoding/gitlys/commit/7b87881) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove unnecessary logger.blank() call in updateChangelog function [`9d200c7`](https://github.com/TheElegantCoding/gitlys/commit/9d200c7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** update README with new illustrations and detailed setup instructions [`7b8c7ce`](https://github.com/TheElegantCoding/gitlys/commit/7b8c7ce) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update release and publish scripts in package.json [`01071d7`](https://github.com/TheElegantCoding/gitlys/commit/01071d7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add new SVG illustration for gitlys cover [`756cf5b`](https://github.com/TheElegantCoding/gitlys/commit/756cf5b) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add new SVG illustration for divider [`5f106df`](https://github.com/TheElegantCoding/gitlys/commit/5f106df) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add new SVG illustration for astralys logo [`d89a473`](https://github.com/TheElegantCoding/gitlys/commit/d89a473) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add new SVG icons for pnpm, rocket, satellite, thunder, typescript, and yarn [`27522b5`](https://github.com/TheElegantCoding/gitlys/commit/27522b5) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add SVG illustrations for npm and TypeScript badges [`e81b971`](https://github.com/TheElegantCoding/gitlys/commit/e81b971) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add wave_footer and wave_header SVG illustrations [`810ec4e`](https://github.com/TheElegantCoding/gitlys/commit/810ec4e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **remove:** Remove obsolete SVG assets for various browsers [`aa018e0`](https://github.com/TheElegantCoding/gitlys/commit/aa018e0) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **chore:** remove CODEOWNERS and code of conduct files [`aed8f65`](https://github.com/TheElegantCoding/gitlys/commit/aed8f65) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add social media image for Gitlys [`c340699`](https://github.com/TheElegantCoding/gitlys/commit/c340699) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **chore:** remove TODO.md file [`0242a20`](https://github.com/TheElegantCoding/gitlys/commit/0242a20) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update logginlys dependency to version 3.0.2 [`a243c2c`](https://github.com/TheElegantCoding/gitlys/commit/a243c2c) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.4] - 2026-04-18
 
 - **fix:** simplify build script in package.json [`49e54fa`](https://github.com/TheElegantCoding/gitlys/commit/49e54fa) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
