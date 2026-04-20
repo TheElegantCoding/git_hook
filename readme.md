@@ -146,12 +146,12 @@ yarn i -D logginlys
   Features
 </h2>
 
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `Commitlint` - Enforce commit message standards
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `Lint-staged` - Lint staged files before commit
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `Changelog` - Generate and maintain a changelog
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `Semantic Release` - Automated semantic versioning and changelog generation
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `GitHub Release` - Automatically create releases on GitHub with the generated changelog
-- <img src="./.github/asset/icon/check.svg" width="16px" align="center" /> `Customizable` - Highly customizable to fit your workflow
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `Commitlint` - Enforce commit message standards
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `Lint-staged` - Lint staged files before commit
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `Changelog` - Generate and maintain a changelog
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `Semantic Release` - Automated semantic versioning and changelog generation
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `GitHub Release` - Automatically create releases on GitHub with the generated changelog
+- <img src="./.github/asset/icon/check.svg" width="18px" align="center" /> `Customizable` - Highly customizable to fit your workflow
 
 <br />
 
