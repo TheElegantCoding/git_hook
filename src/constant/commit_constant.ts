@@ -27,12 +27,12 @@ const commitType: Record<string, { icon: string; label: string; color?: string }
   feat: { icon: ':sparkles:', label: 'Features', color: colorAnsi.green },
   update: { icon: ':arrow_up:', label: 'Updates', color: colorAnsi.green },
   release: { icon: ':rocket:', label: 'Releases', color: colorAnsi.green },
-
   style: { icon: ':art:', label: 'Styles', color: colorAnsi.purple },
 
   refactor: { icon: ':recycle:', label: 'Refactors', color: colorAnsi.cyan },
   test: { icon: ':test_tube:', label: 'Tests', color: colorAnsi.cyan },
   language: { icon: ':globe_with_meridians:', label: 'Languages', color: colorAnsi.cyan },
+  chore: { icon: ':hammer_and_wrench:', label: 'Chores', color: colorAnsi.cyan },
 
   doc: { icon: ':memo:', label: 'Documentation', color: colorAnsi.blue },
   ci: { icon: ':construction_worker:', label: 'CI/CD', color: colorAnsi.blue },
