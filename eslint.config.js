@@ -7,8 +7,7 @@ const config = eslintConfig({
   yml: true,
   html: true,
   perfectionist: true,
-  typescript: true,
-  ignore: ['postcss.config.cjs']
+  typescript: true
 }, {
   rules: {
     'unicorn/no-process-exit': 'off'
