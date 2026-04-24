@@ -16,6 +16,18 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.6] - 2026-04-24
+
+- **fix:** add conditional logic for staging files based on changelog generation setting [`a314de4`](https://github.com/TheElegantCoding/gitlys/commit/a314de4) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update package installation commands to use correct package name [`c3b0ded`](https://github.com/TheElegantCoding/gitlys/commit/c3b0ded) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove unnecessary ignore attribute from eslint configuration [`e781868`](https://github.com/TheElegantCoding/gitlys/commit/e781868) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** add missing chore type to commitType in commit_constant [`a5b3457`](https://github.com/TheElegantCoding/gitlys/commit/a5b3457) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** add missing id attribute to header in README [`0ca5647`](https://github.com/TheElegantCoding/gitlys/commit/0ca5647) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove unnecessary align attributes from images in README [`9f56edd`](https://github.com/TheElegantCoding/gitlys/commit/9f56edd) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** adjust icon size for feature list in README [`e90ca01`](https://github.com/TheElegantCoding/gitlys/commit/e90ca01) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **asset:** Update satellite and thunder icons with new color scheme and mask IDs [`5929342`](https://github.com/TheElegantCoding/gitlys/commit/5929342) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add GitHub icon SVG asset [`0ff7a61`](https://github.com/TheElegantCoding/gitlys/commit/0ff7a61) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.5] - 2026-04-20
 
 - **fix:** add blank option to logger.info in release function for improved readability [`f6c2405`](https://github.com/TheElegantCoding/gitlys/commit/f6c2405) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
