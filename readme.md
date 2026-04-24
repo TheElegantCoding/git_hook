@@ -117,13 +117,13 @@ npm i -D gitlys
 <h3><img src="./.github/asset/icon/pnpm.svg" width="24px" align="center" /> Pnpm</h3>
 
 ```bash
-pnpm i -D logginlys
+pnpm i -D gitlys
 ```
 
 <h3><img src="./.github/asset/icon/yarn.svg" width="24px" align="center" /> Yarn</h3>
 
 ```bash
-yarn i -D logginlys
+yarn i -D gitlys
 ```
 
 <br />
