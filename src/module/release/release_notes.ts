@@ -3,7 +3,7 @@ import { getRepoUrl } from '@src/module/git/git_repo_url.js';
 
 import type { CommitType } from '@src/type/commit_type.js';
 
-const generateReleaseNotes = (version: string, commits: CommitType[]) => {
+const generateReleaseNotes = (commits: CommitType[]) => {
   const github = 'https://github.com';
   const gitUrl = getRepoUrl();
 
@@ -40,7 +40,7 @@ const generateReleaseNotes = (version: string, commits: CommitType[]) => {
     return `${header}\n\n${body}`;
   });
 
-  return `## Release 🚀 [${version}]\n\n${sections.filter(Boolean).join('\n\n')}`;
+  return sections.filter(Boolean).join('\n\n');
 };
 
 export { generateReleaseNotes };
