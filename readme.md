@@ -227,6 +227,15 @@ The configuration of gitlys is really simple, create a file named `.gitlys.json`
 - `changelog.generateChangelog` - Whether to generate a changelog or not
 - `packageManager` - Package manager to use for install gitlys and run scripts
 
+Additionally, if you are using Gitlens and also Copilot you can add the following configuration to your `settings.json` to have a better experience with gitlys:
+
+```json
+{
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.ai.generateCommitMessage.customInstructions": "Use conventional commits, format: <type>: <short description in lowercase>, The description should be concise and describe the change in a few words and always in lowercase, max length of 120 characters, allowed types: feat, fix, doc, style, refactor, perf, test, build, ci, config, update, release, breaking, typo, asset, package, language, security, revert, the message must be in English",
+}
+```
+
 <br />
 
 <img 
