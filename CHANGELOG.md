@@ -16,6 +16,13 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.1.7] - 2026-04-25
+
+- **doc:** add configuration instructions for Gitlens and Copilot integration [`339a57d`](https://github.com/TheElegantCoding/gitlys/commit/339a57d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove version parameter from generateReleaseNotes function [`3b97833`](https://github.com/TheElegantCoding/gitlys/commit/3b97833) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** correct parameters for generating release notes [`9741ade`](https://github.com/TheElegantCoding/gitlys/commit/9741ade) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update bun.lockb to reflect changes in dependencies [`b292a96`](https://github.com/TheElegantCoding/gitlys/commit/b292a96) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.6] - 2026-04-24
 
 - **fix:** add conditional logic for staging files based on changelog generation setting [`a314de4`](https://github.com/TheElegantCoding/gitlys/commit/a314de4) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
