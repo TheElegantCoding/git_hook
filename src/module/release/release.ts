@@ -13,7 +13,7 @@ const release = async () => {
     const currentVersion = getCurrentVersion();
     const commits = getStagedCommit(currentVersion);
     const nextVersion = await selectVersion(currentVersion);
-    const releaseNotes = generateReleaseNotes(nextVersion, commits);
+    const releaseNotes = generateReleaseNotes(commits);
 
     generateRelease(nextVersion, releaseNotes, commits);
   } catch (error) {
