@@ -38,9 +38,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./lint-staged": {
-      "types": "./dist/lint_staged.d.ts",
-      "import": "./dist/lint_staged.js"
+    "./pre_commit_task": {
+      "types": "./dist/pre_commit_task.d.ts",
+      "import": "./dist/pre_commit_task.js"
+    },
+    "./pre_push_task": {
+      "types": "./dist/pre_push_task.d.ts",
+      "import": "./dist/pre_push_task.js"
     }
   },
   "main": "./dist/index.js",
