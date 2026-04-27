@@ -1,5 +1,6 @@
 type ConfigurationType = {
-  lintStaged?: Record<string, string>;
+  prePushTask?: string[];
+  preCommitTask?: Record<string, string>;
   release?: {
     releaseToGithub?: boolean;
   };
