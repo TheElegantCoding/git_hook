@@ -16,6 +16,27 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.0.0] - 2026-04-27
+
+- **feat:** add pre_commit_task and pre_push_task entries to exports in package.json [`6944455`](https://github.com/TheElegantCoding/gitlys/commit/6944455) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add pre_commit_task and pre_push_task entries to build configuration [`c6d09a0`](https://github.com/TheElegantCoding/gitlys/commit/c6d09a0) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add pre_push_task module to execute pre-push tasks [`54ac93a`](https://github.com/TheElegantCoding/gitlys/commit/54ac93a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** create pre_push_task module to execute pre-push tasks [`c28ce2e`](https://github.com/TheElegantCoding/gitlys/commit/c28ce2e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add preCommitTask functionality to execute pre-commit tasks [`c9adec4`](https://github.com/TheElegantCoding/gitlys/commit/c9adec4) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** implement pre-push task functionality to execute configured commands [`bba9792`](https://github.com/TheElegantCoding/gitlys/commit/bba9792) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update log message for clarity when no staged files are found [`7a9ff91`](https://github.com/TheElegantCoding/gitlys/commit/7a9ff91) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** change stdio option from 'ignore' to 'pipe' for git add and commit commands [`f19716e`](https://github.com/TheElegantCoding/gitlys/commit/f19716e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add command_runner utility for executing commands with file staging and reporting [`45ea66a`](https://github.com/TheElegantCoding/gitlys/commit/45ea66a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** update ConfigurationType to include prePushTask and preCommitTask [`588f903`](https://github.com/TheElegantCoding/gitlys/commit/588f903) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** refactor git hook installation to include pre-push task and improve structure [`c352aee`](https://github.com/TheElegantCoding/gitlys/commit/c352aee) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** correct import path and update lintStaged to preCommitTask in configuration [`9d51f91`](https://github.com/TheElegantCoding/gitlys/commit/9d51f91) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** implement getMatchingFiles utility function for pattern matching [`4046894`](https://github.com/TheElegantCoding/gitlys/commit/4046894) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** add max-statements rule to ESLint configuration [`04d04e2`](https://github.com/TheElegantCoding/gitlys/commit/04d04e2) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** rename lintStaged to preCommitTask in configuration [`09cb2c9`](https://github.com/TheElegantCoding/gitlys/commit/09cb2c9) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** implement pre-commit task functionality and remove obsolete lint_staged files [`889b296`](https://github.com/TheElegantCoding/gitlys/commit/889b296) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add initial configuration setup for commitlint and release management [`fda73cc`](https://github.com/TheElegantCoding/gitlys/commit/fda73cc) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update pre-push and pre-commit scripts in package.json [`84e8a0e`](https://github.com/TheElegantCoding/gitlys/commit/84e8a0e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.1.7] - 2026-04-25
 
 - **doc:** add configuration instructions for Gitlens and Copilot integration [`339a57d`](https://github.com/TheElegantCoding/gitlys/commit/339a57d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
