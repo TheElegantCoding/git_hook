@@ -1,5 +1,4 @@
-/* eslint-disable ts/no-unnecessary-condition */
-import { configuration } from '@src/constant/configuration.js';
+import { configuration } from '@src/configuration/configuration.js';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -18,7 +17,7 @@ const getConfigurationFile = () => {
 
 const getConfiguration = () => {
   const configContent = getConfigurationFile();
-  const config = JSON.parse(configContent) as ConfigurationType;
+  const config = JSON.parse(configContent) as null | ConfigurationType;
 
   if (typeof config !== 'object' || config === null) {
     throw new Error('Invalid configuration format in .gitlys.json');
@@ -28,7 +27,7 @@ const getConfiguration = () => {
     ...configuration,
     ...config,
     commitlint: { ...configuration.commitlint, ...config.commitlint },
-    lintStaged: { ...configuration.lintStaged, ...config.lintStaged },
+    preCommitTask: { ...configuration.preCommitTask, ...config.preCommitTask },
     release: { ...configuration.release, ...config.release },
     changelog: { ...configuration.changelog, ...config.changelog }
   };
