@@ -1,21 +1,20 @@
-/* eslint-disable max-statements */
 import { getStagedFiles } from '@src/module/git/git_staged.js';
-import { runLintCommand } from '@src/module/lin_staged/command_runner.js';
-import { getMatchingFiles } from '@src/module/lin_staged/pattern_matcher.js';
+import { runCommand } from '@src/util/command_runner.js';
 import { getConfiguration } from '@src/util/file_configuration.js';
 import { logger } from '@src/util/logger.js';
+import { getMatchingFiles } from '@src/util/pattern_matcher.js';
 
-const lintStaged = () => {
+const preCommitTask = () => {
   try {
     const config = getConfiguration();
-    const lintStagedConfig = config.lintStaged as Record<string, string>;
+    const preCommitTaskConfig = config.preCommitTask as Record<string, string>;
     const stagedFiles = getStagedFiles();
 
-    for (const [pattern, command] of Object.entries(lintStagedConfig)) {
+    for (const [pattern, command] of Object.entries(preCommitTaskConfig)) {
       const matchingFiles = getMatchingFiles(pattern, stagedFiles);
 
       if (matchingFiles.length > 0) {
-        runLintCommand(command, pattern, matchingFiles);
+        runCommand(command, matchingFiles);
       }
     }
 
@@ -23,9 +22,9 @@ const lintStaged = () => {
       logger.success('All staged files have been validated and corrected.');
     }
   } catch (error) {
-    logger.error(`Linting failed: ${error instanceof Error ? error.message : String(error)}`);
+    logger.error(`pre commit failed: ${error instanceof Error ? error.message : String(error)}`);
     process.exit(1);
   }
 };
 
-export { lintStaged };
+export { preCommitTask };
