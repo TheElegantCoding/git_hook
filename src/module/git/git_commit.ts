@@ -14,12 +14,12 @@ const commitStagedVersionFiles = (nextVersion: string): void => {
   loader.start();
 
   if (config.changelog.generateChangelog) {
-    execSync(`git add package.json ${changelogPath}`, { stdio: 'ignore' });
+    execSync(`git add package.json ${changelogPath}`, { stdio: 'pipe' });
   } else {
-    execSync('git add package.json', { stdio: 'ignore' });
+    execSync('git add package.json', { stdio: 'pipe' });
   }
 
-  execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'ignore' });
+  execSync(`git commit -m "release: ${nextVersion}"`, { stdio: 'pipe' });
   loader.stop();
 };
 
