@@ -7,7 +7,8 @@ const configuration: ConfigurationType = {
     allowedTypes: commonCommit,
     maxLength: 120
   },
-  lintStaged: {},
+  preCommitTask: {},
+  prePushTask: [],
   release: {
     releaseToGithub: false
   },
