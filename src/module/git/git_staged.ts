@@ -9,7 +9,7 @@ const getStagedFiles = (): string[] => {
     .filter(Boolean);
 
   if (stagedFiles.length === 0) {
-    logger.info('No staged files to lint.');
+    logger.info('No staged files found. Skipping tasks.');
     return [];
   }
 
