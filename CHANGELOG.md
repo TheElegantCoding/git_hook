@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.0.1] - 2026-04-27
+
+- **refactor:** simplify runCommand by removing spinner and error handling [`6ff23c7`](https://github.com/TheElegantCoding/gitlys/commit/6ff23c7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.0.0] - 2026-04-27
 
 - **feat:** add pre_commit_task and pre_push_task entries to exports in package.json [`6944455`](https://github.com/TheElegantCoding/gitlys/commit/6944455) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
