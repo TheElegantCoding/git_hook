@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "rootDir": "./",
     "module": "nodenext",
     "moduleResolution": "nodenext",
