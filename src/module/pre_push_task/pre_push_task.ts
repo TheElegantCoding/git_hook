@@ -1,5 +1,6 @@
 import { runCommand } from '@src/util/command_runner.js';
 import { getConfiguration } from '@src/util/file_configuration.js';
+import { handleError } from '@src/util/handle_error.js';
 import { logger } from '@src/util/logger.js';
 
 const prePushTask = () => {
@@ -14,8 +15,7 @@ const prePushTask = () => {
 
     logger.success('Pre-push tasks completed successfully!');
   } catch (error) {
-    logger.error(`Git push failed: ${error instanceof Error ? error.message : String(error)}`);
-    process.exit(1);
+    handleError(error, 'Git push failed:');
   }
 };
 
