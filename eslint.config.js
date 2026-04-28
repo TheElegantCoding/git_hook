@@ -11,7 +11,8 @@ const config = eslintConfig({
 }, {
   rules: {
     'unicorn/no-process-exit': 'off',
-    'max-statements': ['error', 20]
+    'max-statements': ['error', 20],
+    'ts/no-base-to-string': 'off'
   }
 });
 
