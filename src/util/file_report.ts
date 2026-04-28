@@ -7,6 +7,7 @@ import path from 'node:path';
 const fileReport = (files: string[]): void => {
   const longerName = getLongerName(files);
   logger.blank();
+  logger.blank();
   files.forEach((file) => {
     const absolutePath = path.isAbsolute(file)
       ? file
