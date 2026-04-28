@@ -24,7 +24,7 @@ class ReportLogger extends LogManager {
       showTimestamp: false
     };
 
-    this.custom(messageWithIcon, logStyle);
+    this.debug(messageWithIcon, logStyle);
   }
 
   file (file: File, largeFileName: string) {
@@ -42,7 +42,7 @@ class ReportLogger extends LogManager {
     const message = loggerStyle.ansi(file.name, { color: colorAnsi.white });
     const messageWithIcon = `${check} ${fileIcon} ${message} ${space} (${fileSize})`;
 
-    this.custom(messageWithIcon, { ...logStyle });
+    this.debug(messageWithIcon, { ...logStyle });
   }
 }
 
