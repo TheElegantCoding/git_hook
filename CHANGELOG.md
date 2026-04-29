@@ -16,6 +16,25 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.1.0] - 2026-04-29
+
+- **fix:** enhance logger message for staged commits with bold formatting [`20a217c`](https://github.com/TheElegantCoding/gitlys/commit/20a217c) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** adjust logger message formatting for staged commits report [`b60428c`](https://github.com/TheElegantCoding/gitlys/commit/b60428c) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** enhance preCommitTask to report modified files and improve error handling [`be011b0`](https://github.com/TheElegantCoding/gitlys/commit/be011b0) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** integrate file reporting in pre-push task with modified files [`6110d77`](https://github.com/TheElegantCoding/gitlys/commit/6110d77) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add getPushFiles function to retrieve modified files before push [`494f533`](https://github.com/TheElegantCoding/gitlys/commit/494f533) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove fileReport call from runCommand function [`0dc17b7`](https://github.com/TheElegantCoding/gitlys/commit/0dc17b7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove redundant blank logger call in fileReport function [`bf48c91`](https://github.com/TheElegantCoding/gitlys/commit/bf48c91) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** replace logger.error with handleError for improved error handling in prePushTask [`96f2946`](https://github.com/TheElegantCoding/gitlys/commit/96f2946) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** replace logger.info with loggerLoader for command execution logging [`38f301f`](https://github.com/TheElegantCoding/gitlys/commit/38f301f) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** replace custom logging calls with debug in ReportLogger [`854f27a`](https://github.com/TheElegantCoding/gitlys/commit/854f27a) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** add additional blank logger call in fileReport function [`525c7e3`](https://github.com/TheElegantCoding/gitlys/commit/525c7e3) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **feat:** add handleError utility for improved error logging [`025bd59`](https://github.com/TheElegantCoding/gitlys/commit/025bd59) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** enhance loggerLoader with styled success and final messages [`5111417`](https://github.com/TheElegantCoding/gitlys/commit/5111417) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update tsconfig to include jsx and jsxImportSource options [`234fb70`](https://github.com/TheElegantCoding/gitlys/commit/234fb70) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** add 'ts/no-base-to-string' rule to ESLint configuration [`64ffa38`](https://github.com/TheElegantCoding/gitlys/commit/64ffa38) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **chore:** update eslint-config-universal-code and logginlys dependencies [`fc7f712`](https://github.com/TheElegantCoding/gitlys/commit/fc7f712) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.0.1] - 2026-04-27
 
 - **refactor:** simplify runCommand by removing spinner and error handling [`6ff23c7`](https://github.com/TheElegantCoding/gitlys/commit/6ff23c7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
