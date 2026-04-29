@@ -62,7 +62,8 @@ const getStagedCommit = (currentVersion: string, reportCommits = true) => {
   const gitIcon = loggerStyle.ansi('\udb80\udea2', { color: colorAnsi.red });
 
   if (reportCommits) {
-    logger.info(`Found ${gitIcon} ${result.length} staged commits, since last version:`, { blankBelow: true });
+    const commitMessage = loggerStyle.ansi(`${result.length} staged commits, since last version:`, { bold: true });
+    logger.info(`Found ${gitIcon} ${commitMessage}`, { blankBelow: true });
     result.forEach((entry) => { reportLogger.commit(entry); });
     logger.blank();
   }
