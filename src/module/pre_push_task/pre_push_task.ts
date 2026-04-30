@@ -21,7 +21,6 @@ const prePushTask = () => {
     fileReport(pushFiles);
 
     logger.success('Pre-push tasks completed successfully!');
-    process.exit(2);
   } catch (error) {
     handleError(error, 'Git push failed:');
   }
