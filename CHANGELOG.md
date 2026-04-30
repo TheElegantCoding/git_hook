@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.1.4] - 2026-04-30
+
+- **fix:** format command strings in createHookContent for consistency [`56f7ecb`](https://github.com/TheElegantCoding/gitlys/commit/56f7ecb) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.1.3] - 2026-04-30
 
 - **fix:** remove process.exit call from prePushTask to prevent abrupt termination [`f6e06e7`](https://github.com/TheElegantCoding/gitlys/commit/f6e06e7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
