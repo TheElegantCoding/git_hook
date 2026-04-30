@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.1.2] - 2026-04-30
+
+- **fix:** enhance createTag function to use loggerLoader for better logging [`e535255`](https://github.com/TheElegantCoding/gitlys/commit/e535255) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.1.1] - 2026-04-30
 
 - **fix:** update getPushFiles to retrieve modified files between commits [`ab85d1e`](https://github.com/TheElegantCoding/gitlys/commit/ab85d1e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
