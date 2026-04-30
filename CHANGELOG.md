@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.1.1] - 2026-04-30
+
+- **fix:** update getPushFiles to retrieve modified files between commits [`ab85d1e`](https://github.com/TheElegantCoding/gitlys/commit/ab85d1e) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.1.0] - 2026-04-29
 
 - **fix:** enhance logger message for staged commits with bold formatting [`20a217c`](https://github.com/TheElegantCoding/gitlys/commit/20a217c) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
