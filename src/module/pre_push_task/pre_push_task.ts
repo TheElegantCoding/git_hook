@@ -14,11 +14,14 @@ const prePushTask = () => {
       return;
     }
 
-    config.prePushTask.forEach((command) => { runCommand(command); });
+    for (const command of config.prePushTask) {
+      runCommand(command);
+    }
 
     fileReport(pushFiles);
 
     logger.success('Pre-push tasks completed successfully!');
+    process.exit(2);
   } catch (error) {
     handleError(error, 'Git push failed:');
   }
