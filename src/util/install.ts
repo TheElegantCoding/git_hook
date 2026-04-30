@@ -22,9 +22,15 @@ const checkGitDirectory = (directory: string): boolean => {
 };
 
 const createHookContent = (configuration: ConfigurationType, isProduction: boolean) => {
-  const install = isProduction ? 'node ./node_modules/gitlys/dist/index.js "$1"' : `${configuration.packageManager} src/index.ts "$1"`;
-  const preCommitTaskCommand = isProduction ? 'node ./node_modules/gitlys/dist/pre_commit_task.js "$1"' : `${configuration.packageManager} src/pre_commit_task.ts`;
-  const prePushTaskCommand = isProduction ? 'node ./node_modules/gitlys/dist/pre_push_task.js "$1"' : `${configuration.packageManager} src/pre_push_task.ts`;
+  const install = isProduction
+    ? `${configuration.packageManager} ./node_modules/gitlys/dist/index.js "$1"`
+    : `${configuration.packageManager} src/index.ts "$1"`;
+  const preCommitTaskCommand = isProduction
+    ? `${configuration.packageManager} ./node_modules/gitlys/dist/pre_commit_task.js "$1"`
+    : `${configuration.packageManager} src/pre_commit_task.ts`;
+  const prePushTaskCommand = isProduction
+    ? `${configuration.packageManager} ./node_modules/gitlys/dist/pre_push_task.js "$1"`
+    : `${configuration.packageManager} src/pre_push_task.ts`;
 
   const hookContent = `#!/bin/bash\n\n${install}`;
   const preCommitContent = `#!/bin/bash\n\n${preCommitTaskCommand}`;
