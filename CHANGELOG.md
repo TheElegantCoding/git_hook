@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [2.1.3] - 2026-04-30
+
+- **fix:** remove process.exit call from prePushTask to prevent abrupt termination [`f6e06e7`](https://github.com/TheElegantCoding/gitlys/commit/f6e06e7) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** remove redundant command execution in prePushTask [`c37a87d`](https://github.com/TheElegantCoding/gitlys/commit/c37a87d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [2.1.2] - 2026-04-30
 
 - **fix:** enhance createTag function to use loggerLoader for better logging [`e535255`](https://github.com/TheElegantCoding/gitlys/commit/e535255) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
